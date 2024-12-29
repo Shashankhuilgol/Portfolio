@@ -124,6 +124,4 @@ Technologies used in the project:
 
 <h2>Project Support</h2>
 
-<p>If you have any questions or need assistance with the project feel free to contact me through the contact form or email me at [Shashank.huilgol22@gmail.com].</p>
-
-<p>To support this project feel free to share your feedback or suggestions!</p>
+If you have any questions or need assistance with the project feel free to contact me through the contact form or email me at \[Shashank.huilgol22@gmail.com\].<p>To support this project feel free to share your feedback or suggestions!</p>
