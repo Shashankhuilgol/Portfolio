@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Ubuntu:wght@300;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@500&family=Ubuntu:wght@300;500;700&display=swap');
 
-
 body {
-    background-color:black;
+    background-color: black;
 }
-
 
 * {
     margin: 0px;
@@ -21,16 +19,15 @@ body {
     top: 0;
     left: 0;
     z-index: 100;
-    border-bottom: .5px solid #ffffff52;
+    border-bottom: 0.5px solid #ffffff52;
     border-width: 80%;
     margin-bottom: 1rem;
 }
 
 #navbar .right-nav .flex:hover {
     font-weight: bold;
-    color:#00a0e4
+    color: #00a0e4;
 }
-
 
 #navbar ul {
     list-style: none;
@@ -43,7 +40,6 @@ body {
 #navbar ul li a {
     text-decoration: none;
     padding: 0.5rem 0.9rem;
-
 }
 
 .right {
@@ -59,11 +55,10 @@ body {
 }
 
 .nav-col a:hover {
-    border-radius: .4rem;
+    border-radius: 0.4rem;
     color: black;
     background-color: #fff;
 }
-
 
 /* Home Section */
 .home-left,
@@ -77,8 +72,8 @@ body {
 }
 
 .home-left h6,
-h4{
-    color: rgb(128,0,128);
+h4 {
+    color: rgb(128, 0, 128);
     margin: 1rem 0;
     margin-left: 3px;
     font-size: 5rem;
@@ -92,27 +87,23 @@ h4{
     position: relative;
 }
 
-
 .home-right img {
     position: absolute;
-    width:170%;
+    width: 170%;
     left: 40px;
     top: -50px;
     background-size: cover;
     border-radius: 84%;
     height: 150%;
 }
-    
-
 
 .circle {
     width: 17rem;
     height: 17rem;
     border-radius: 50%;
-    padding: .5rem;
+    padding: 0.5rem;
     position: relative;
 }
-
 
 /* About Section */
 .about-left,
@@ -130,15 +121,14 @@ h4{
 
 .about-left img {
     width: 100%;
-    height: 400px;;
+    height: 400px;
     border-radius: 1rem;
+    margin-top: -100px;  /*Added negative margin to move the image higher */
 }
 
 .about-content p {
     margin-bottom: 2rem;
 }
-
-
 
 /* Skills */
 #skills {
@@ -163,23 +153,23 @@ h4{
 
 .python {
     width: 90%;
-    height: .5rem;
-    background-color:#7952b3;
+    height: 0.5rem;
+    background-color: #7952b3;
     margin: 1rem 0;
     border-radius: 12px;
 }
 
 .html {
     width: 90%;
-    height: .5rem;
-    background-color:  #00a0e4;
+    height: 0.5rem;
+    background-color: #00a0e4;
     margin: 1rem 0;
     border-radius: 12px;
 }
 
 .git {
     width: 90%;
-    height: .5rem;
+    height: 0.5rem;
     background-color: #7FFF00;
     margin: 1rem 0;
     border-radius: 12px;
@@ -187,7 +177,7 @@ h4{
 
 .django {
     width: 85%;
-    height: .5rem;
+    height: 0.5rem;
     background-color: #FFE4C4;
     margin: 1rem 0;
     border-radius: 12px;
@@ -195,7 +185,7 @@ h4{
 
 .sql {
     width: 65%;
-    height: .5rem;
+    height: 0.5rem;
     background-color: #61dafb;
     margin: 1rem 0;
     border-radius: 12px;
@@ -203,15 +193,15 @@ h4{
 
 .css {
     width: 60%;
-    height: .5rem;
-    background-color:yellow;
+    height: 0.5rem;
+    background-color: yellow;
     margin: 1rem 0;
     border-radius: 12px;
 }
 
 .java {
     width: 55%;
-    height: .5rem;
+    height: 0.5rem;
     background-color: #e54c21;
     margin: 1rem 0;
     border-radius: 12px;
@@ -219,12 +209,11 @@ h4{
 
 .learning {
     width: 100%;
-    height: .5rem;
+    height: 0.5rem;
     background-color: #61dbfb;
     margin: 1rem 0;
     border-radius: 12px;
 }
-
 
 .bar {
     margin: 2rem 0;
@@ -249,8 +238,9 @@ h4{
     align-items: center;
     margin: auto;
     flex-wrap: wrap;
+    display: flex; /* Added for flex layout */
+    gap: 2rem; /* Added spacing between items */
 }
-
 
 .projects-item {
     overflow: hidden;
@@ -260,17 +250,54 @@ h4{
     border-radius: 1.5rem;
     padding: 2rem 1rem;
     text-align: justify;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for better look */
+    transition: transform 0.3s ease-in-out; /* Hover animation */
+}
+
+.projects-item:hover {
+    transform: scale(1.05);
 }
 
 .projects-item h1 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
+    color: #fff; /* White text for titles */
+    text-align: center; /* Center align project titles */
 }
-
 .projects-item p {
     line-height: 20px;
-    font-size: .9rem;
+    font-size: 0.9rem;
+    color: #eee; /* Lighter text color */
 }
+
+.projects-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.projects-item .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: rgb(128, 0, 128);
+    background-color: #7952b3;
+    border: 1px solid #800080;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.projects-item .btn:hover {
+    background-color: #fff;
+    color: black;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 
 /* Certifications section */
 .certifications-container {
@@ -279,6 +306,7 @@ h4{
     margin: auto;
     flex-wrap: wrap;
 }
+
 .certifications-item {
     overflow: hidden;
     width: 20rem;
@@ -286,18 +314,18 @@ h4{
     background: #7952b3;
     border-radius: 1.5rem;
     padding: 2rem 1rem;
-    text-align:  justify;
+    text-align: justify;
 }
+
 .certifications-item h1 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
+
 .certifications-item p {
     line-height: 20px;
-    font-size: .9rem;
+    font-size: 0.9rem;
     word-spacing: 1px;
-    
-    
 }
 
 .certifications-item ul {
@@ -305,15 +333,20 @@ h4{
     padding: 0;
     text-align: left;
     color: white;
-        
 }
 
 .certifications-item li {
-    color:white;
+    color: white;
     margin-bottom: 0.5rem;
     font-size: 1rem;
-    text-align:left;
+    text-align: left;
 }
+.certifications-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
 
 /* Contact me Section */
 .form {
@@ -328,10 +361,10 @@ h4{
 .form-div input,
 textarea {
     border: 2px solid rgba(255, 255, 255, 0.4);
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     width: 100%;
     margin: 0.5rem 0rem;
-    font-size: .9rem;
+    font-size: 0.9rem;
     background: transparent;
     margin: 0.5rem 0rem;
     padding: 0.5rem 1rem;
@@ -339,9 +372,7 @@ textarea {
     resize: none;
 }
 
-
-
-/* Footer Section  */
+/* Footer Section */
 #footer {
     background-color: black;
     padding: 1%;
@@ -357,13 +388,12 @@ ul li a {
     text-decoration: none;
     font-size: 1.2rem;
     color: white;
-    transition: all .5s;
+    transition: all 0.5s;
 }
 
 ul li a:hover {
     color: #fff;
 }
-
 
 .font-awesome {
     margin: 1.1rem auto;
@@ -376,22 +406,20 @@ ul li a:hover {
     color: #fff;
     border-radius: 0.5rem;
     cursor: pointer;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .font-awesome li i:hover {
     border: 1px solid black;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     background: transparent;
-    color: rgb(128,0,128);
+    color: rgb(128, 0, 128);
 }
 
 #footer p {
     color: white;
-    font-size: .9srem;
+    font-size: 0.9rem;
 }
-
-
 
 /* Utility Classes */
 .poppins {
@@ -425,7 +453,6 @@ ul li a:hover {
 .f-col {
     flex-direction: column;
 }
-
 
 .p-relative {
     position: relative;
@@ -480,15 +507,15 @@ ul li a:hover {
 }
 
 .btn {
-    margin-left: 0 .5rem;
+    margin-left: 0 0.5rem;
     font-size: 1rem;
-    color:rgb(128,0,128);
+    color: rgb(128, 0, 128);
     cursor: pointer;
     padding: 0.75rem 1.2rem;
     border: 1px solid #800080;
     border-radius: 0.4rem;
     background: transparent;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; 
 }
 
 .buttons a,
@@ -503,26 +530,79 @@ ul li a:hover {
 }
 
 .live {
-    color: black;
-    background-color: #800080;
+    color: black !important;
+    background-color: #800080 !important; /* Purple color */
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
+.live:hover {
+    background-color: white !important; /* White background on hover */
+    color: black !important; /* Text color changes to black on hover for contrast */
+}
 
+/* Media Queries for Mobile Responsiveness */
 
+/* Mobile Layout */
+@media (max-width: 768px) {
+    .home-left, .home-right {
+        width: 100%;
+        padding: 3rem;
+    }
 
+    .home-left h6, .home-left h4, .home-left h1 {
+        font-size: 3rem;
+    }
 
+    .projects-item {
+        width: 90%;
+        margin: 1rem auto;
+    }
 
+    .skills-left, .skills-right {
+        width: 100%;
+    }
 
+    .form {
+        flex-direction: column;
+    }
 
+    .form-div input, textarea {
+        font-size: 1rem;
+    }
 
+    #footer ul {
+        text-align: center;
+    }
 
+    #navbar ul li {
+        margin: 1rem 0;
+    }
+}
 
+/* Smaller Mobile Layout */
+@media (max-width: 480px) {
+    .home-left h6, .home-left h4, .home-left h1 {
+        font-size: 2.5rem;
+    }
 
+    .projects-item {
+        width: 100%;
+    }
 
+    .skills-left, .skills-right {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
 
+    .bar-content {
+        font-size: 0.8rem;
+    }
 
+    .btn {
+        font-size: 0.9rem;
+    }
 
-
-
-
-
+    #footer p {
+        font-size: 0.8rem;
+    }
+}
