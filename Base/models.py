@@ -6,3 +6,6 @@ class Contact(models.Model):
     email=models.EmailField(max_length=40)
     content=models.TextField(max_length=440)
     number=models.CharField(max_length=14)
+    
+    def __str__(self):
+        return f"Message from {self.name} - {self.email}"
