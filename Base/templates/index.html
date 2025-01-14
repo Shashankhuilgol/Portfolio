@@ -271,6 +271,16 @@
     <!-- contact me section -->
     <section id="contact" class="m-b-1">
       <h1 class="t-center my-2 t-white f-2">Contact Me</h1>
+      <!-- Display success message if any -->
+      {% if messages %}
+       <div class="messages" style="margin-bottom: 20px;">
+         {% for message in messages %}
+           <div class="alert alert-success">
+             {{ message }}
+           </div>
+         {% endfor %}
+       </div>
+     {% endif %}
       <div class="Contact-container flex s-around items-center">
         <div class="form" id="contactform">
           <form method="post">
@@ -320,9 +330,9 @@
             </div>
             <button type=" submit" class="btn popinss" id="submit">send</button>
           </form>
-          {% if success %}
-          <p class="success-message">Your message has been sent successfully!</p>
-          {% endif %}
+          <!-- In index.html, add this block to display messages -->
+          
+
         </div>
       </div>
     </section>

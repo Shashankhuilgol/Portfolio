@@ -540,6 +540,22 @@ ul li a:hover {
     color: black !important; /* Text color changes to black on hover for contrast */
 }
 
+/* This is for the success message when anyone fills the form */
+
+.messages {
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+
+
 /* Media Queries for Mobile Responsiveness */
 
 /* Mobile Layout */

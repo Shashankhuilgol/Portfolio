@@ -4,6 +4,6 @@ from Base import views
 
 urlpatterns = [
         
-        path('',views.contact)
+        path('',views.contact),
 
 ]

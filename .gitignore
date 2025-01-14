@@ -1,0 +1,12 @@
+# Ignore the virtual environment folder
+venv/
+
+# Ignore the .pyc files and __pycache__ folder
+__pycache__/
+*.pyc
+
+# Ignore any other sensitive or personal configuration files
+*.env
+
+*.log
+*.sqlite3
