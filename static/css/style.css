@@ -142,6 +142,8 @@ h4 {
     position: relative;
 }
 
+
+
 /* About Section */
 .about-left,
 .about-right {
@@ -270,49 +272,50 @@ h4 {
 }
 
 /* Projects Section */
-.Projects-container {
+#projects {
+    position: sticky;
+}
+
+.swiper-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto; /* Adjusted margin */
+    overflow: hidden;
+    padding-bottom: 2rem;
+}
+
+.swiper-slide {
+    display: flex;
     justify-content: center;
-    align-items: center;
-    margin: auto;
-    flex-wrap: wrap;
-    display: flex; /* Added for flex layout */
-    gap: 2rem; /* Added spacing between items */
+    margin: 10px; /*added margin*/
 }
 
 .projects-item {
-    overflow: hidden;
-    width: 20rem;
-    margin: 1rem;
+    max-width: 20rem; /*changed to max width*/
+    width: 90%; /*added width*/
     background: #7952b3;
     border-radius: 1.5rem;
     padding: 2rem 1rem;
     text-align: justify;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for better look */
-    transition: transform 0.3s ease-in-out; /* Hover animation */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .projects-item:hover {
     transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .projects-item h1 {
     font-size: 1.4rem;
     margin-bottom: 1rem;
-    color: #fff; /* White text for titles */
-    text-align: center; /* Center align project titles */
-}
-.projects-item p {
-    line-height: 20px;
-    font-size: 0.9rem;
-    color: #eee; /* Lighter text color */
+    color: #fff;
+    text-align: center;
 }
 
-.projects-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+.projects-item p {
+    font-size: 0.9rem;
+    color: #eee;
 }
 
 .projects-item .btn {
@@ -324,8 +327,6 @@ h4 {
     background-color: #7952b3;
     border: 1px solid #800080;
     border-radius: 0.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
     text-align: center;
 }
 
@@ -335,6 +336,33 @@ h4 {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+    color: white;
+    top: 50%;
+}
+
+.swiper-pagination {
+    bottom: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+/* Responsive adjustments for project cards */
+@media (max-width: 768px) {
+    .projects-item {
+        width: 90%; /* Adjust width for smaller screens */
+        margin: 1rem auto; /* Center cards on smaller screens */
+    }
+}
+
+  
 
 /* Certifications section */
 .certifications-container {

@@ -15,14 +15,23 @@
     />
     <link rel="icon" type="image/x-icon" href="./Images/favicon.jpeg" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    
+    <!-- Swiper.js CSS -->
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Swiper.js JavaScript -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   </head>
   <body>
     <!-- Loading Screen -->
     <div id="loading-screen">
       <div class="spinner"></div>
     </div>
-    
+
     <!-- navbar section -->
     <nav id="navbar" class="flex s-around bg-color">
       <div class="left-nav">
@@ -175,90 +184,105 @@
       </div>
     </section>
 
-    <!-- projects section-->
+    <!-- Projects Section -->
     <section id="projects">
       <h1 class="t-center my-2 t-white f-2">Projects</h1>
-      <div class="projects-container flex s-center">
-        <div class="projects-item flex f-col s-center items-center">
-          <h1 class="t-white popinss">Criteria-6 Automation</h1>
-          <p class="t-white popinss">
-            The system addresses the challenges of manual record keeping by
-            efficiently managing item and staff details within the department.It
-            eliminates data redundancy, inconsistency and inefficiencies by
-            utilizing a Database Management System (DBMS) for seamless data
-            handling.
-          </p>
-          <div class="button flex s-around">
-            <a
-              href="https://github.com/Shashankhuilgol/CR-6-Automation"
-              target="_blanks"
-              class="btn mx-1 m-top"
-              >GitHub</a
-            >
-            <a href="" target="_blanks" class="btn m-top live">Live Link</a>
+
+      <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+          <!-- Project 1 -->
+          <div class="swiper-slide">
+            <div class="projects-item flex f-col s-center items-center">
+              <h1 class="t-white popinss">Criteria-6 Automation</h1>
+              <p class="t-white popinss">
+                The system addresses the challenges of manual record keeping by
+                efficiently managing item and staff details within the
+                department.It eliminates data redundancy, inconsistency and
+                inefficiencies by utilizing a Database Management System (DBMS)
+                for seamless data handling.
+              </p>
+              <div class="button flex s-around">
+                <a
+                  href="https://github.com/Shashankhuilgol/CR-6-Automation"
+                  class="btn mx-1 m-top"
+                  >GitHub</a
+                >
+                <a href="" class="btn m-top live">Live Link</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="swiper-slide">
+            <div class="projects-item flex f-col s-center items-center">
+              <h1 class="t-white popinss">My Portfolio</h1>
+              <p class="t-white popinss">
+                I designed and built this portfolio website using HTML,CSS and
+                Python to showcase my skills and expertise.The site features a
+                modern minimalistic design that emphasizes the content ensuring
+                my work stands out. Its simple intuitive layout allows visitors
+                to navigate effortlessly and explore my projects with ease.
+              </p>
+              <div class="button flex s-around">
+                <a href="" class="btn mx-1 m-top">GitHub</a>
+                <a href="" class="btn m-top live">Live Link</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="swiper-slide">
+            <div class="projects-item flex f-col s-center items-center">
+              <h1 class="t-white popinss">Flask Auth_App</h1>
+              <p class="t-white popinss">
+                The Flask Authentication App is built with Flask and manages
+                user registration, login, and logout. It secures passwords using
+                Flask-Bcrypt, handles sessions with Flask-Login, and stores data
+                via Flask-SQLAlchemy. Flask-WTF ensures form validation, making
+                authentication efficient and secure.
+              </p>
+              <div class="button flex s-around">
+                <a
+                  href="https://github.com/Shashankhuilgol/Flask_Auth_App"
+                  class="btn mx-1 m-top"
+                  >GitHub</a
+                >
+                <a href="" class="btn m-top live">Live Link</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="swiper-slide">
+            <div class="projects-item flex f-col s-center items-center">
+              <h1 class="t-white popinss">Library Mgmt_System</h1>
+              <p class="t-white popinss">
+                This Library Management System is built using Django. It
+                includes models for managing books, authors, borrowers, and
+                borrowed books. The system offers seamless operations like
+                borrowing and returning books while tracking user activities and
+                ensuring proper resource management.
+              </p>
+              <div class="button flex s-around">
+                <a
+                  href="https://github.com/Shashankhuilgol/Library_Management_System"
+                  class="btn mx-1 m-top"
+                  >GitHub</a
+                >
+                <a
+                  href="https://librarymanagementsystem-production-eab9.up.railway.app"
+                  class="btn m-top live"
+                  >Live Link</a
+                >
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="projects-item flex f-col s-center items-center">
-          <h1 class="t-white popinss">My Portfolio</h1>
-          <p class="t-white popinss">
-            I designed and built this portfolio website using HTML,CSS and
-            Python to showcase my skills and expertise.The site features a
-            modern minimalistic design that emphasizes the content ensuring my
-            work stands out. Its simple intuitive layout allows visitors to
-            navigate effortlessly and explore my projects with ease.
-          </p>
-          <div class="button flex s-around">
-            <a href="" target="_blanks" class="btn mx-1 m-top">GITHUB</a>
-            <a href="" target="_blanks" class="btn m-top live">Live Link</a>
-          </div>
-        </div>
-
-        <div class="projects-item flex f-col s-center items-center">
-          <h1 class="t-white popinss">Flask Auth_App</h1>
-          <p class="t-white popinss">
-            The Flask Authentication App handles user registration, login, and
-            logout. It secures passwords with Flask-Bcrypt, manages sessions via
-            Flask-Login, and uses Flask-SQLAlchemy with SQLite for data storage.
-            Flask-WTF manages form validation. This project is a simple yet
-            effective starting point for implementing authentication in
-            Flask-based web applications.
-          </p>
-          <div class="button flex s-around">
-            <a
-              href="https://github.com/Shashankhuilgol/Flask_Auth_App"
-              target="_blanks"
-              class="btn mx-1 m-top"
-              >GITHUB</a
-            >
-            <a href="" target="_blanks" class="btn m-top live">Live Link</a>
-          </div>
-        </div>
-
-        <div class="projects-item flex f-col s-center items-center">
-          <h1 class="t-white popinss">Library Mgmt_System</h1>
-          <p class="t-white popinss">
-            This Library Management System is built using Django. It includes
-            models for managing books, authors, borrowers, and borrowed books.
-            The system offers seamless operations like borrowing and returning
-            books while tracking user activities and ensuring proper resource
-            management.
-          </p>
-          <div class="button flex s-around">
-            <a
-              href="https://github.com/Shashankhuilgol/Library_Management_System"
-              target="_blanks"
-              class="btn mx-1 m-top"
-              >GITHUB</a
-            >
-            <a
-              href="https://librarymanagementsystem-production-eab9.up.railway.app"
-              target="_blanks"
-              class="btn m-top live"
-              >Live Link</a
-            >
-          </div>
-        </div>
+        <!-- Pagination and Navigation -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
     </section>
 
@@ -422,7 +446,5 @@
       </p>
     </footer>
     <script src="{% static 'js/script.js' %}"></script>
-    
-
   </body>
 </html>
