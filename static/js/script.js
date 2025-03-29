@@ -1,14 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("JavaScript Loaded!");
-    document.getElementById("loading-screen").style.display = "none";
+
+    // Remove loading screen if present
+    const loadingScreen = document.getElementById("loading-screen");
+    if (loadingScreen) {
+        loadingScreen.style.display = "none";
+    }
 
     // Swiper for general carousel
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3, // Show 3 cards at a time
-        spaceBetween: 20, // Spacing between slides
-        loop: false, // No infinite scrolling
+    new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        loop: false,
         autoplay: {
-            delay: 3000, // Auto-slide every 3s
+            delay: 3000,
             disableOnInteraction: false,
         },
         navigation: {
@@ -20,21 +25,15 @@ document.addEventListener("DOMContentLoaded", function () {
             clickable: true,
         },
         breakpoints: {
-            1024: {
-                slidesPerView: 3,
-            },
-            768: {
-                slidesPerView: 2,
-            },
-            480: {
-                slidesPerView: 1,
-            }
+            1024: { slidesPerView: 3 },
+            768: { slidesPerView: 2 },
+            480: { slidesPerView: 1 }
         }
     });
 
     // Swiper for certifications carousel
-    var certificationSwiper = new Swiper(".certificationSwiper", {
-        slidesPerView: 3, // Show 3 certificates at a time
+    new Swiper(".certificationSwiper", {
+        slidesPerView: 3,
         spaceBetween: 20,
         loop: false,
         autoplay: {
@@ -50,16 +49,25 @@ document.addEventListener("DOMContentLoaded", function () {
             clickable: true,
         },
         breakpoints: {
-            1024: {
-                slidesPerView: 3,
-            },
-            768: {
-                slidesPerView: 2,
-            },
-            480: {
-                slidesPerView: 1,
-            }
+            1024: { slidesPerView: 3 },
+            768: { slidesPerView: 2 },
+            480: { slidesPerView: 1 }
         }
     });
+
+    // ✅ Mobile dropdown toggle
+    const toggleBtn = document.querySelector('.toggle-btn');
+    const toggleBtnIcon = document.querySelector('.toggle-btn i');
+    const dropdownMenu = document.querySelector('.dropdown_menu');
+    
+    toggleBtn.onclick = function(){
+        dropdownMenu.classList.toggle('open');
+        const isOpen = dropdownMenu.classList.contains('open');
+    
+        toggleBtnIcon.classList = isOpen
+            ? "fa-solid fa-xmark"
+            : "fa-solid fa-bars";
+    }
+    
 
 });
