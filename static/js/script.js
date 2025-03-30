@@ -1,3 +1,19 @@
+// Function to remove Swiper arrows on mobile
+function removeSwiperArrowsOnMobile() {
+    if (window.innerWidth <= 768) {
+        const nextButton = document.querySelector(".swiper-button-next");
+        const prevButton = document.querySelector(".swiper-button-prev");
+
+        if (nextButton) {
+            nextButton.remove();
+        }
+
+        if (prevButton) {
+            prevButton.remove();
+        }
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     console.log("JavaScript Loaded!");
 
@@ -11,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     new Swiper(".mySwiper", {
         slidesPerView: 3,
         spaceBetween: 20,
-        loop: false,
+        loop: true,
         autoplay: {
             delay: 3000,
             disableOnInteraction: false,
@@ -27,9 +43,12 @@ document.addEventListener("DOMContentLoaded", function () {
         breakpoints: {
             1024: { slidesPerView: 3 },
             768: { slidesPerView: 2 },
-            480: { slidesPerView: 1 }
-        }
+            480: { slidesPerView: 1 },
+        },
     });
+
+    // Remove Swiper arrows on mobile (initial load)
+    removeSwiperArrowsOnMobile();
 
     // Swiper for certifications carousel
     new Swiper(".certificationSwiper", {
@@ -51,23 +70,24 @@ document.addEventListener("DOMContentLoaded", function () {
         breakpoints: {
             1024: { slidesPerView: 3 },
             768: { slidesPerView: 2 },
-            480: { slidesPerView: 1 }
-        }
+            480: { slidesPerView: 1 },
+        },
     });
 
-    // ✅ Mobile dropdown toggle
+    // Mobile dropdown toggle
     const toggleBtn = document.querySelector('.toggle-btn');
     const toggleBtnIcon = document.querySelector('.toggle-btn i');
     const dropdownMenu = document.querySelector('.dropdown_menu');
-    
-    toggleBtn.onclick = function(){
+
+    toggleBtn.onclick = function () {
         dropdownMenu.classList.toggle('open');
         const isOpen = dropdownMenu.classList.contains('open');
-    
+
         toggleBtnIcon.classList = isOpen
             ? "fa-solid fa-xmark"
             : "fa-solid fa-bars";
-    }
-    
-
+    };
 });
+
+// Remove Swiper arrows on mobile (window resize)
+window.addEventListener("resize", removeSwiperArrowsOnMobile);

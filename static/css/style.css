@@ -51,8 +51,10 @@ body {
     display: none;
   }
   
+  
 /* Navbar */
-/* Navbar */
+
+
 .navbar {
     display: flex;
     position:sticky;
@@ -143,7 +145,7 @@ body {
   }
   
   /* Responsive */
-  @media (max-width: 992px) {
+  @media (max-width: 768px) {
     .navbar .links {
       display: none;
     }
@@ -153,9 +155,13 @@ body {
   }
 
 
+/*end of an navbar section*/
+
+
 
 /* Home Section */
-/* Home Section */
+
+
 .home-left,
 .home-right {
     width: 50%;
@@ -228,10 +234,14 @@ h4 {
 }
 
 
+/* End of Home Section */
 
 
 
 /* About Section */
+/* ✅ Default About Section (For Desktop) */
+
+
 .about-left,
 .about-right {
     width: 60%;
@@ -241,7 +251,7 @@ h4 {
     padding-right: 4rem;
 }
 
-.aboout-left {
+.about-left { /* ✅ Fixed typo (was .aboout-left) */
     position: relative;
 }
 
@@ -249,16 +259,62 @@ h4 {
     width: 100%;
     height: 400px;
     border-radius: 1rem;
-    margin-top: -100px;  /*Added negative margin to move the image higher */
+    margin-top: -100px; /* Moves the image higher */
 }
-
-
 
 .about-content p {
     margin-bottom: 2rem;
 }
 
+/* ✅ Mobile-Only View (No effect on Desktop) */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center;
+        gap: 1rem; /* Reduces space */
+        padding: 1.5rem;
+    }
+
+    .about-left,
+    .about-right {
+        width: 100%; /* ✅ Override width for mobile */
+    }
+
+    .about-left img {
+        width: 80%;
+        max-width: 250px;
+        height: auto;
+        margin-top: 0; /* Keeps spacing balanced */
+    }
+
+    .about-right {
+        padding: 1rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .about-content a {
+        display: inline-block;
+        margin-top: 1rem; /* Fixes overlap issue */
+        padding: 10px 15px;
+        text-decoration: none;
+        border: 2px solid purple;
+        border-radius: 8px;
+        color: purple;
+    }
+}
+
+
+/* End of About Section */
+
+
+
 /* Skills */
+
+
 #skills {
     margin-top: 0rem; /* Reduced margin to move section up */
 }
@@ -367,16 +423,94 @@ h4 {
     right: 0;
 }
 
+/* ✅ Mobile-Only View (No effect on Desktop) */
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        text-align: center;
+    }
+
+    .skills-left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.5rem; /* Adds gap between image and skills text */
+    }
+
+    .skills-left img {
+        width: 75%; /* Adjusted size for mobile */
+        max-width: 280px; /* Prevents overly large images */
+        height: auto;
+        position: relative;
+        right: -10px; /* Moves image slightly to the right */
+        border-radius: 50%; /* Makes the image round */
+        object-fit: cover; /* Ensures proper image fit */
+    }
+
+    .skills-right {
+        width: 90%;
+        margin-top: -1rem;/*used for moving the skill bars up*/ 
+    }
+
+    .skills-container {
+        width: 100%;
+        padding: 0 4rem; /* Increased padding to move bars slightly right */
+    }
+
+    .bar {
+        margin: 1.5rem 0;
+        position: relative;
+        z-index: 1; /* Ensures bars do not overlap titles */
+        margin-left: 15px; /* Moves bars slightly to the right */
+    }
+
+    .bar-content {
+        font-size: 0.9rem;
+        bottom: 5px;
+    }
+
+    h1.t-center.my-2.t-white.f-2 {
+        margin-bottom: 35px !important;   /* Adjusts spacing for mobile view between the skills text and skils image*/
+    }
+    
+
+    #skills { /* Assuming #skills is the ID of your skills section */
+        margin-top: 0rem; /* Add top margin */
+    }
+
+
+    .left {
+        left: 10px; /* Moves text slightly right */
+    }
+
+    .right-skills {
+        right: -5px; /* Adjusts right alignment */
+    }
+
+
+
+
+}
+
+
+/** End of Skills Section */
+
+
 
 /* Projects Section */
+/* Projects Section (Desktop Styles - No Changes) */
+
+
 #projects {
     position: sticky;
+    margin-top: 2rem;
 }
 
 .swiper-container {
     width: 90%;
     max-width: 1200px;
-    margin: 2rem auto; /* Adjusted margin */
+    margin: 2rem auto;
     overflow: hidden;
     padding-bottom: 2rem;
 }
@@ -384,12 +518,12 @@ h4 {
 .swiper-slide {
     display: flex;
     justify-content: center;
-    margin: 10px; /*added margin*/
+    margin: 10px;
 }
 
 .projects-item {
-    max-width: 20rem; /*changed to max width*/
-    width: 90%; /*added width*/
+    max-width: 20rem;
+    width: 90%;
     background: #7952b3;
     border-radius: 1.5rem;
     padding: 2rem 1rem;
@@ -435,8 +569,9 @@ h4 {
 
 .swiper-button-next,
 .swiper-button-prev {
-    color: white;
-    top: 50%;
+    /*color: white !important;*/
+    /*top: 50%;*/
+    display: none !important; /* Hide navigation arrow buttons */
 }
 
 .swiper-pagination {
@@ -445,23 +580,90 @@ h4 {
     left: 50%;
     transform: translateX(-50%);
 }
+.swiper-pagination-bullet{
+    background-color: white !important; /* Change bullet color to white */
+}
 
 .swiper-wrapper {
     display: flex;
     align-items: center;
 }
 
-/* Responsive adjustments for project cards */
+/* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
+    .swiper-container {
+        width: 100%; /* Full width on mobile */
+        margin: 1rem auto; /* Reduced margin */
+        padding-bottom: 1rem; /* Reduced padding */
+        
+    }
+    h1.t-center.my-2.t-white.f-2 {
+        margin-bottom: auto; /* Adjusts spacing for mobile view and it reduces the space between the project text and its image*/
+    }
+
+    .swiper-slide {
+        margin: 15px 0; /* Adjusted margin for vertical spacing */
+    }
+
     .projects-item {
-        width: 90%; /* Adjust width for smaller screens */
-        margin: 1rem auto; /* Center cards on smaller screens */
+        max-width: 90%; /* Increased max-width for better use of space */
+        width: 90%;
+        padding: 1.5rem; /* Reduced padding for smaller screens */
+    }
+
+    .projects-item h1 {
+        font-size: 1.2rem; /* Reduced font size for heading */
+    }
+
+    .projects-item p {
+        font-size: 0.85rem; /* Reduced font size for paragraph */
+    }
+
+    .projects-item .btn {
+        font-size: 0.9rem; /* Reduced font size for buttons */
+        padding: 0.4rem 0.8rem; /* Reduced button padding */
+    }
+
+        /* Fix overlapping issue */
+    #projects {
+        margin-top: -5rem; /* Adds extra space before Projects title */
+        position: relative;
+        z-index: 2;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none !important; /* Hide navigation buttons on mobile */
+    }    
+    
+    .swiper-container::after {
+        content: "Swipe to see more";
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.5);
+        opacity: 0.8;
+    }
+    
+    .swiper-pagination-bullet{
+        background-color: white !important; /* Change bullet color to white */
+    }
+    .swiper-pagination {
+        bottom: 5px; /* Adjust pagination position */
+        margin-bottom: 20px; /* Add bottom margin to pagination dots */
     }
 }
 
-  
+
+/* End of Projects Section */
+
+
 
 /* Certifications section */
+
+
 .certifications-container {
     justify-content: center;
     align-items: center;
@@ -510,9 +712,14 @@ h4 {
 }
 
 
+/*End of certifications section */
+
+
 
 
 /* Contact me Section */
+
+
 .form {
     display: flex;
     width: 80%;
@@ -536,7 +743,35 @@ textarea {
     resize: none;
 }
 
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .Contact-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .form {
+        width: 95%;
+        padding: 0 1rem;
+    }
+    .form-div input,
+    textarea {
+        font-size: 1rem;
+        padding: 0.75rem 1rem;
+    }
+    .form button { /* Updated to target only contact form button */
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+}
+
+/* End of Contact me Section */
+
+
+
 /* Footer Section */
+
+
 #footer {
     background-color: rgba(6,5,8,255);
     padding: 1%;
@@ -584,6 +819,10 @@ ul li a:hover {
     color: white;
     font-size: 0.9rem;
 }
+
+/* End of Footer Section */
+
+
 
 /* Utility Classes */
 .poppins {
