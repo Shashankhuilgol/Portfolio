@@ -145,7 +145,7 @@ body {
   }
   
   /* Responsive */
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     .navbar .links {
       display: none;
     }
@@ -204,7 +204,7 @@ h4 {
 }
 
 /* ✅ Responsive */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     #home {
       flex-direction: column;
       text-align: center;
@@ -267,7 +267,7 @@ h4 {
 }
 
 /* ✅ Mobile-Only View (No effect on Desktop) */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .about-container {
         flex-direction: column; /* Stack content vertically */
         text-align: center;
@@ -424,7 +424,7 @@ h4 {
 }
 
 /* ✅ Mobile-Only View (No effect on Desktop) */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .skills-container {
         flex-direction: column; /* Stack elements vertically */
         align-items: center;
@@ -590,7 +590,7 @@ h4 {
 }
 
 /* Mobile Responsive Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .swiper-container {
         width: 100%; /* Full width on mobile */
         margin: 1rem auto; /* Reduced margin */
@@ -744,7 +744,7 @@ textarea {
 }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
     .Contact-container {
         flex-direction: column;
         padding: 1rem;
