@@ -147,6 +147,10 @@ body {
     }
 }
 
+/** End of Navbar */
+
+
+
 /* Home Section */
 .home-left,
 .home-right {
@@ -315,6 +319,10 @@ h4 {
         color: purple;
     }
 }
+
+/* End of About Section */
+
+
 
 /* Skills Section */
 #skills {
@@ -489,6 +497,9 @@ h4 {
     }
 }
 
+/* End of Skills Section */
+
+
 /* Projects Section */
 #projects {
     position: sticky;
@@ -578,66 +589,94 @@ h4 {
 
 /* Responsive Projects Section */
 @media (max-width: 400px) {
+    /* Styles applied to screens with a maximum width of 400 pixels (typically mobile phones) */
+
     .swiper-container {
-        width: 100%;
-        margin: 1rem auto;
-        padding-bottom: 1rem;
+        /* Set the width of the Swiper container to 100% of its parent */
+        width: 100% !important;
+
+        /* Add margin to the top and bottom, and center the container horizontally */
+        margin: 1rem auto !important;
+
+        /* Add padding to the bottom to create space for the pagination dots */
+        padding-bottom: 3rem !important;
     }
 
-    h1.t-center.my-2.t-white.f-2 {
-        margin-bottom: auto;
+    .swiper-wrapper {
+        /* Use flexbox to arrange the slides horizontally */
+        display: flex !important;
     }
 
     .swiper-slide {
-        margin: 15px 0;
+        /* Set the width of each slide to 100% */
+        width: 100% !important;
+
+        /* Add margin to the top and bottom of each slide */
+        margin: 1rem 0 !important;
+
+        /* Use flexbox to arrange the content within each slide */
+        display: flex !important;
+
+        /* Center the project items horizontally within each slide */
+        justify-content: center !important;
     }
 
     .projects-item {
-        max-width: 90%;
-        width: 90%;
-        padding: 1.5rem;
+        /* Set the maximum width of the project items to 100% */
+        max-width: 100% !important;
+
+        /* Set the width of the project items to 100% */
+        width: 100% !important;
+
+        /* Add padding inside the project items */
+        padding: 1.5rem !important;
+
+        /* Add a subtle shadow to the project items */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+
+        /* Add rounded corners to the project items */
+        border-radius: 10px !important;
+
+        /* Display project items as inline-block to arrange them side by side */
+        display: inline-block !important;
     }
 
     .projects-item h1 {
-        font-size: 1.2rem;
+        /* Increase the font size of the project item headings */
+        font-size: 1.4rem !important;
     }
 
     .projects-item p {
-        font-size: 0.85rem;
+        /* Set the font size of the project item paragraphs */
+        font-size: 0.85rem !important;
+
+        /* Add margin to the bottom of the paragraphs to create space between paragraphs and buttons */
+        margin-bottom: 1rem !important;
     }
 
     .projects-item .btn {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
-    }
+        /* Set the font size of the project item buttons */
+        font-size: 0.9rem !important;
 
-    #projects {
-        margin-top: -5rem;
-        position: relative;
-        z-index: 2;
-    }
+        /* Add padding to the project item buttons */
+        padding: 0.4rem 0.8rem !important;
 
-    .swiper-button-next,
-    .swiper-button-prev {
-        display: none !important;
-    }
+        /* Display buttons as block elements to stack them vertically */
+        display: block;
 
-    .swiper-container::after {
-        content: "Swipe to see more";
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 0.8rem;
-        color: rgba(255, 255, 255, 0.5);
-        opacity: 0.8;
+        /* Center the buttons horizontally */
+        margin: 0 auto;
     }
 
     .swiper-pagination {
-        bottom: 5px;
-        margin-bottom: 20px;
+        /* Add margin to the bottom of the pagination to create space */
+        margin-bottom: 25px !important;
     }
 }
+
+/*End of Projects Section */
+
+
 
 /* Certifications section */
 .certifications-container {
@@ -688,6 +727,10 @@ h4 {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+/*End of Certifications Section */
+
+
+
 /* Contact me Section */
 .form {
     display: flex;
@@ -736,6 +779,10 @@ textarea {
         font-size: 1rem;
     }
 }
+/*End of Contact Section */
+
+
+
 
 /* Footer Section */
 #footer {
@@ -785,6 +832,57 @@ ul li a:hover {
     color: white;
     font-size: 0.9rem;
 }
+
+
+@media (max-width: 400px) {
+    #footer {
+        padding: 1.5rem 0.5rem;
+        text-align: center;
+    }
+
+    #footer ul {
+        margin-top: 0.2rem; /* Reduced margin-top (even smaller) */
+        margin-bottom: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+
+    #footer ul li {
+        margin: 0 0.5rem;
+    }
+
+    #footer ul li a {
+        font-size: 1.1rem;
+    }
+
+    .font-awesome {
+        justify-content: center;
+        margin-top: 1rem;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+
+    .font-awesome li {
+        margin: 0 0.5rem;
+    }
+
+    .font-awesome li i {
+        padding: 0.9rem;
+        font-size: 1.2rem;
+    }
+
+    #footer p {
+        font-size: 0.9rem;
+    }
+}
+
+
+/*End of Footer Section */
 
 /* Utility Classes */
 .poppins {

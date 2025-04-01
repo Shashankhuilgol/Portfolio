@@ -1,19 +1,3 @@
-// Function to remove Swiper arrows on mobile
-function removeSwiperArrowsOnMobile() {
-    if (window.innerWidth <= 768) {
-        const nextButton = document.querySelector(".swiper-button-next");
-        const prevButton = document.querySelector(".swiper-button-prev");
-
-        if (nextButton) {
-            nextButton.remove();
-        }
-
-        if (prevButton) {
-            prevButton.remove();
-        }
-    }
-}
-
 document.addEventListener("DOMContentLoaded", function () {
     console.log("JavaScript Loaded!");
 
@@ -25,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Swiper for general carousel
     new Swiper(".mySwiper", {
-        slidesPerView: 3,
-        spaceBetween: 20,
-        loop: true,
+        slidesPerView: 1, // Only one card visible per swipe
+        spaceBetween: 0, // Remove extra space between slides
+        loop: false, // Disable loop for precise swiping
         autoplay: {
             delay: 3000,
             disableOnInteraction: false,
@@ -38,21 +22,43 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         pagination: {
             el: ".swiper-pagination",
-            clickable: true,
+            clickable: true, // Allow clicking on dots for navigation
         },
         breakpoints: {
-            1024: { slidesPerView: 3 },
-            768: { slidesPerView: 2 },
-            480: { slidesPerView: 1 },
+            // Desktop: Show 3 cards with space between
+            1024: { slidesPerView: 3, spaceBetween: 20 },
+            // Tablet: Show 2 cards with space between
+            768: { slidesPerView: 2, spaceBetween: 20 },
+            // Mobile: Only one card
+            480: { slidesPerView: 1, spaceBetween: 0 },
         },
     });
+
+    // Function to remove Swiper arrows on mobile
+    function removeSwiperArrowsOnMobile() {
+        if (window.innerWidth <= 768) {
+            const nextButton = document.querySelector(".swiper-button-next");
+            const prevButton = document.querySelector(".swiper-button-prev");
+
+            if (nextButton) {
+                nextButton.remove();
+            }
+
+            if (prevButton) {
+                prevButton.remove();
+            }
+        }
+    }
 
     // Remove Swiper arrows on mobile (initial load)
     removeSwiperArrowsOnMobile();
 
+    // Recheck and remove arrows on window resize
+    window.addEventListener("resize", removeSwiperArrowsOnMobile);
+
     // Swiper for certifications carousel
     new Swiper(".certificationSwiper", {
-        slidesPerView: 3,
+        slidesPerView: 1, // Ensure one card for smaller screens
         spaceBetween: 20,
         loop: false,
         autoplay: {
@@ -68,26 +74,23 @@ document.addEventListener("DOMContentLoaded", function () {
             clickable: true,
         },
         breakpoints: {
-            1024: { slidesPerView: 3 },
-            768: { slidesPerView: 2 },
-            480: { slidesPerView: 1 },
+            1024: { slidesPerView: 3, spaceBetween: 20 },
+            768: { slidesPerView: 2, spaceBetween: 20 },
+            480: { slidesPerView: 1, spaceBetween: 0 },
         },
     });
 
     // Mobile dropdown toggle
-    const toggleBtn = document.querySelector('.toggle-btn');
-    const toggleBtnIcon = document.querySelector('.toggle-btn i');
-    const dropdownMenu = document.querySelector('.dropdown_menu');
+    const toggleBtn = document.querySelector(".toggle-btn");
+    const toggleBtnIcon = document.querySelector(".toggle-btn i");
+    const dropdownMenu = document.querySelector(".dropdown_menu");
 
     toggleBtn.onclick = function () {
-        dropdownMenu.classList.toggle('open');
-        const isOpen = dropdownMenu.classList.contains('open');
+        dropdownMenu.classList.toggle("open");
+        const isOpen = dropdownMenu.classList.contains("open");
 
         toggleBtnIcon.classList = isOpen
             ? "fa-solid fa-xmark"
             : "fa-solid fa-bars";
     };
 });
-
-// Remove Swiper arrows on mobile (window resize)
-window.addEventListener("resize", removeSwiperArrowsOnMobile);
