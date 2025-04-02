@@ -13,6 +13,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" type="image/x-icon" href="static/images/favicon.jpeg" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <!-- Swiper.js CSS -->
@@ -161,53 +162,145 @@
     </section>
 
     <!-- skills section -->
-    <section id="skills">
-      <h1 class="t-center my-2 t-white f-2">Skills</h1>
-      <div class="services-container flex s-around h-50">
-        <div class="skills-left flex s-center items-center">
-          <img src="{%static 'images/skill.png'%}" alt="skills image" />
-        </div>
-        <div class="skills-right flex items-center">
-          <div class="skills-container">
-            <div class="python bar p-relative">
-              <span class="bar-content left t-white">Python</span>
-              <span class="bar-content right-skills t-white">90%</span>
-            </div>
 
-            <div class="html bar p-relative">
-              <span class="bar-content left t-white">HTML</span>
-              <span class="bar-content right-skills t-white">90%</span>
-            </div>
 
-            <div class="git bar p-relative">
-              <span class="bar-content left t-white">GIT</span>
-              <span class="bar-content right-skills t-white">90%</span>
-            </div>
-
-            <div class="django bar p-relative">
-              <span class="bar-content left t-white">Django</span>
-              <span class="bar-content right-skills t-white">85%</span>
-            </div>
-
-            <div class="sql bar p-relative">
-              <span class="bar-content left t-white">MYSQL</span>
-              <span class="bar-content right-skills t-white">65%</span>
-            </div>
-
-            <div class="css bar p-relative">
-              <span class="bar-content left t-white">CSS</span>
-              <span class="bar-content right-skills t-white">60%</span>
-            </div>
-
-            <div class="java bar p-relative">
-              <span class="bar-content left t-white">Java</span>
-              <span class="bar-content right-skills t-white">55%</span>
-            </div>
+    <section id="skills-section">
+      <h1 class="sub-title">My Skills</h1>
+  
+      <div class="skills-container">
+          <div class="technical-skills">
+              <h2>Technical Skills</h2>
+              <div class="skill-row">
+                  <div class="skill-icon">
+                      <i class="bx bxl-html5" style="color: #E34C26;"></i>
+                  </div>
+                  <div class="skill-info">
+                      <span class="skill-name">HTML</span>
+                      <div class="progress-bar">
+                          <div class="progress" data-percent="90"></div>
+                      </div>
+                      <span class="percent">90%</span>
+                  </div>
+              </div>
+              <div class="skill-row">
+                  <div class="skill-icon">
+                      <i class="bx bxl-css3" style="color: #1572B6;"></i>
+                  </div>
+                  <div class="skill-info">
+                      <span class="skill-name">CSS</span>
+                      <div class="progress-bar">
+                          <div class="progress" data-percent="80"></div>
+                      </div>
+                      <span class="percent">80%</span>
+                  </div>
+              </div>
+              <div class="skill-row">
+                  <div class="skill-icon">
+                      <i class="bx bxl-python" style="color: #3776AB;"></i>
+                  </div>
+                  <div class="skill-info">
+                      <span class="skill-name">Python</span>
+                      <div class="progress-bar">
+                          <div class="progress" data-percent="75"></div>
+                      </div>
+                      <span class="percent">75%</span>
+                  </div>
+              </div>
+              <div class="skill-row">
+                  <div class="skill-icon">
+                      <i class="bx bxl-django" style="color: #092E20;"></i>
+                  </div>
+                  <div class="skill-info">
+                      <span class="skill-name">Django</span>
+                      <div class="progress-bar">
+                          <div class="progress" data-percent="65"></div>
+                      </div>
+                      <span class="percent">65%</span>
+                  </div>
+              </div>
+              <div class="skill-row">
+                  <div class="skill-icon">
+                      <i class="bx bxl-git" style="color: #F05032;"></i>
+                  </div>
+                  <div class="skill-info">
+                      <span class="skill-name">Git</span>
+                      <div class="progress-bar">
+                          <div class="progress" data-percent="70"></div>
+                      </div>
+                      <span class="percent">70%</span>
+                  </div>
+              </div>
+              <div class="skill-row">
+                  <div class="skill-icon">
+                    <i class="bx bx-data" style="color: #00758F;"></i>
+                  </div>
+                  <div class="skill-info">
+                      <span class="skill-name">MySQL</span>
+                      <div class="progress-bar">
+                          <div class="progress" data-percent="60"></div>
+                      </div>
+                      <span class="percent">60%</span>
+                  </div>
+              </div>
+               <div class="skill-row">
+                  <div class="skill-icon">
+                      <i class="bx bxl-java" style="color: #5382A1;"></i>
+                  </div>
+                  <div class="skill-info">
+                      <span class="skill-name">Java</span>
+                      <div class="progress-bar">
+                          <div class="progress" data-percent="55"></div>
+                      </div>
+                      <span class="percent">55%</span>
+                  </div>
+              </div>
           </div>
-        </div>
+  
+          <div class="professional-skills">
+              <h2>Professional Skills</h2>
+              <div class="circle-skill" data-percent="90">
+                  <div class="circle-progress">
+                      <svg viewBox="0 0 100 100">
+                          <path class="bg" d="M 50,50 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"></path>
+                          <path class="fg" d="M 50,50 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"></path>
+                      </svg>
+                      <span class="circle-percent">90%</span>
+                  </div>
+                  <span class="circle-label">Creativity</span>
+              </div>
+              <div class="circle-skill" data-percent="65">
+                  <div class="circle-progress">
+                      <svg viewBox="0 0 100 100">
+                          <path class="bg" d="M 50,50 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"></path>
+                          <path class="fg" d="M 50,50 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"></path>
+                      </svg>
+                      <span class="circle-percent">65%</span>
+                  </div>
+                  <span class="circle-label">Communication</span>
+              </div>
+              <div class="circle-skill" data-percent="75">
+                  <div class="circle-progress">
+                      <svg viewBox="0 0 100 100">
+                          <path class="bg" d="M 50,50 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"></path>
+                          <path class="fg" d="M 50,50 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"></path>
+                      </svg>
+                      <span class="circle-percent">75%</span>
+                  </div>
+                  <span class="circle-label">Problem Solving</span>
+              </div>
+              <div class="circle-skill" data-percent="85">
+                  <div class="circle-progress">
+                      <svg viewBox="0 0 100 100">
+                          <path class="bg" d="M 50,50 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"></path>
+                          <path class="fg" d="M 50,50 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"></path>
+                      </svg>
+                      <span class="circle-percent">85%</span>
+                  </div>
+                  <span class="circle-label">Teamwork</span>
+              </div>
+          </div>
       </div>
-    </section>
-
+  </section>
     <!-- Projects Section -->
     <section id="projects">
       <h1 class="t-center my-2 t-white f-2">Projects</h1>

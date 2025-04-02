@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Swiper for general carousel
-    new Swiper(".mySwiper", {
-        slidesPerView: 1, // Only one card visible per swipe
-        spaceBetween: 0, // Remove extra space between slides
-        loop: false, // Disable loop for precise swiping
+    const mySwiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: false,
         autoplay: {
             delay: 3000,
             disableOnInteraction: false,
@@ -22,43 +22,30 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         pagination: {
             el: ".swiper-pagination",
-            clickable: true, // Allow clicking on dots for navigation
+            clickable: true,
         },
         breakpoints: {
-            // Desktop: Show 3 cards with space between
             1024: { slidesPerView: 3, spaceBetween: 20 },
-            // Tablet: Show 2 cards with space between
             768: { slidesPerView: 2, spaceBetween: 20 },
-            // Mobile: Only one card
             480: { slidesPerView: 1, spaceBetween: 0 },
         },
     });
 
     // Function to remove Swiper arrows on mobile
     function removeSwiperArrowsOnMobile() {
-        if (window.innerWidth <= 768) {
-            const nextButton = document.querySelector(".swiper-button-next");
-            const prevButton = document.querySelector(".swiper-button-prev");
-
-            if (nextButton) {
-                nextButton.remove();
-            }
-
-            if (prevButton) {
-                prevButton.remove();
-            }
-        }
+        const isMobile = window.innerWidth <= 768;
+        document.querySelectorAll(".swiper-button-next, .swiper-button-prev").forEach(button => {
+            button.style.display = isMobile ? "none" : "";
+        });
     }
 
-    // Remove Swiper arrows on mobile (initial load)
+    // Initial check and recheck on resize
     removeSwiperArrowsOnMobile();
-
-    // Recheck and remove arrows on window resize
     window.addEventListener("resize", removeSwiperArrowsOnMobile);
 
     // Swiper for certifications carousel
-    new Swiper(".certificationSwiper", {
-        slidesPerView: 1, // Ensure one card for smaller screens
+    const certificationSwiper = new Swiper(".certificationSwiper", {
+        slidesPerView: 1,
         spaceBetween: 20,
         loop: false,
         autoplay: {
@@ -87,10 +74,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     toggleBtn.onclick = function () {
         dropdownMenu.classList.toggle("open");
-        const isOpen = dropdownMenu.classList.contains("open");
-
-        toggleBtnIcon.classList = isOpen
+        toggleBtnIcon.classList = dropdownMenu.classList.contains("open")
             ? "fa-solid fa-xmark"
             : "fa-solid fa-bars";
     };
+
+    // Skills animation logic (linear progress bars)
+    const progressBars = document.querySelectorAll('.progress');
+    progressBars.forEach(bar => {
+        const percent = bar.dataset.percent;
+        bar.style.width = percent + '%';
+    });
+
+    // Skills animation logic (circular progress bars - loader effect)
+    const circleSkills = document.querySelectorAll('.circle-skill');
+    circleSkills.forEach(circleSkill => {
+        const percent = circleSkill.dataset.percent; // Retrieve percentage from data attribute
+        const fgCircle = circleSkill.querySelector('.fg'); // Get the foreground circle element
+        const radius = 45; // Radius of the circle as defined in the SVG path
+        const circumference = 2 * Math.PI * radius; // Full circumference of the circle
+        const offset = circumference - (circumference * (percent / 100)); // Calculate stroke-dashoffset
+
+        fgCircle.style.strokeDasharray = `${circumference}`; // Set stroke-dasharray to circumference
+        fgCircle.style.strokeDashoffset = `${offset}`; // Set stroke-dashoffset for dynamic effect
+    });
 });
