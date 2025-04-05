@@ -678,7 +678,6 @@ h4 {
     }
 }
 
-
 /* End of Skills Section */
 
 
@@ -870,52 +869,184 @@ h4 {
 
 
 /* Certifications section */
-.certifications-container {
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    flex-wrap: wrap;
+/*=============== CERTIFICATIONS SECTION STYLES (Matching Projects) ===============*/
+.certifications.section {
+    padding-top: 3rem;
+    padding-bottom: 2.5rem;
 }
 
-.certifications-item {
+.certifications__title {
+    font-size: 30px; /* Match .section__title */
+}
+
+.certifications__container {
+    padding-top: 3rem;
+    row-gap: 2rem;
+    overflow: hidden; /* Important for Swiper */
+    padding-bottom: 2.5rem; /* Adjust as needed for pagination */
+}
+
+.certifications__container .swiper-wrapper {
+    display: flex; /* Ensure slides are in a row */
+    padding: 0; /* Remove default padding that might interfere */
+}
+
+.certifications__container .swiper-slide {
+    background-color: var(--container-color); /* Or your card background color */
+    padding: 1.5rem;
+    border-radius: 2rem;
+    width: 330px; /* Match your card width for initial display */
+    margin-right: 2rem; /* Add some space between slides */
+    overflow: hidden; /* ADD THIS TO THE CARD TO CONTAIN THE IMAGE */
+}
+
+/* Last slide should not have margin-right */
+.certifications__container .swiper-wrapper > .swiper-slide:last-child {
+    margin-right: 0;
+}
+
+.certifications__image { /* ADD THIS FOR THE IMAGE CONTAINER */
+    display: block;
     overflow: hidden;
-    width: 20rem;
-    margin: 1rem;
-    background: #7952b3;
     border-radius: 1.5rem;
-    padding: 2rem 1rem;
-    text-align: justify;
+    margin-bottom: 1.5rem;
 }
 
-.certifications-item h1 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+.certifications__img {
+    display: block; /* Ensure it behaves as a block-level element */
+    width: 100%; /* Make sure the image fills the container */
+    transition: transform .4s;
 }
 
-.certifications-item p {
-    line-height: 20px;
-    font-size: 0.9rem;
-    word-spacing: 1px;
+.certifications__data h3 {
+    font-size: var(--h3-font-size);
+    margin-bottom: .5rem;
 }
 
-.certifications-item ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: left;
-    color: white;
+.certifications__descrtption {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.6; /* Improve readability */
+    font-size: var(--normal-font-size); /* Or your preferred font size */
+    text-align: justify; /* This is the key property */
+    -webkit-hyphens: auto; /* For Safari */
+    -moz-hyphens: auto;     /* For Firefox */
+    hyphens: auto;           /* Standard */
 }
 
-.certifications-item li {
-    color: white;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    text-align: left;
+.certifications__data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This pushes the buttons to the bottom */
+    align-items: flex-start; /* Keeps text aligned to the left */
+    min-height: 0; /* Important for flexbox height calculations */
 }
 
-.certifications-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+.certifications__button {
+    color: var(--white-color);
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    transition: color .4s;
+}
+
+.certifications__button i {
+    font-size: 1.25rem;
+}
+
+.certifications__button span {
+    font-weight: var(--font-medium);
+}
+
+.certifications__button:hover {
+    color: var(--textcolor); /* Assuming you have this variable */
+}
+
+.certifications__card:hover .certifications__image .certifications__img { /* UPDATE HOVER TARGET */
+    transform: scale(1.2);
+}
+
+/* Swiper pagination styles */
+.certifications__container .swiper-pagination {
+    position: static !important; /* Display below the slider */
+    margin-top: 1rem;
+}
+
+.certifications__container .swiper-pagination-bullet {
+    background-color: var(--text-color-light);
+    opacity: 1;
+}
+
+.certifications__container .swiper-pagination-bullet-active {
+    background-color: white !important; /* Match projects pagination active color */
+}
+
+/* Swiper navigation button styles */
+.certifications__container .swiper-button-prev,
+.certifications__container .swiper-button-next {
+    color: var(--first-color);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.certifications__container .swiper-button-prev::after,
+.certifications__container .swiper-button-next::after {
+    font-size: 1.5rem; /* Adjust icon size */
+    font-weight: bold;
+}
+
+.certifications__container .swiper-button-prev {
+    left: 1rem;
+    display:none !important; /* Hide prev button on mobile */
+}
+
+.certifications__container .swiper-button-next {
+    right: 1rem;
+    display: none !important; /* Hide next button on mobile */
+}
+
+/* Hide skills section as it's not used in certifications */
+.certifications__data ul {
+    list-style: none;
+    padding-left: 0; /* Remove default list indentation */
+}
+
+.certifications__data ul li {
+    margin-bottom: 0.25rem;
+    color: var(--text-color);
+    font-size: var(--small-font-size);
+}
+/* Media Queries (adjust as needed to match your projects section responsiveness) */
+@media screen and (max-width: 767px) {
+    .certifications__container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .certifications__container {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .certifications__container {
+        overflow: initial;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        margin: 0;
+    }
+}
+@media screen and (max-width: 400px) {
+    .certifications__container {
+        grid-template-columns: 280px;
+    }
+    .certifications__card {
+        padding: 1rem;
+    }
 }
 
 /*End of Certifications Section */

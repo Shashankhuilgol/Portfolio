@@ -74,4 +74,37 @@ document.addEventListener("DOMContentLoaded", function () {
         mousewheel: true,
         keyboard: true,
     });
+
+    // Initialize Swiper for the certifications section with autoplay
+    const certificationsSwiper = new Swiper('.certifications__container', {
+        spaceBetween: 24,
+        loop: true,
+        grabCursor: true,
+        autoplay: { // Enable autoplay for certifications
+            delay: 3000, // Delay between slides in milliseconds (3 seconds)
+            disableOnInteraction: false, // Continue autoplay even after user interaction
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 24,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 48,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 48,
+            },
+        },
+    });
 });
