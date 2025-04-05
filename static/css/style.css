@@ -1,8 +1,149 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Ubuntu:wght@300;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@500&family=Ubuntu:wght@300;500;700&display=swap');
 
+/*=============== VARIABLES CSS ===============*/
+:root {
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    /*
+        Change favorite color:
+
+        Default (Red): hsl(358, 80%, 49%)
+        Purple: hsl(265, 80%, 49%) - Blue: hsl(220, 80%, 49%)
+        Pink: hsl(330, 80%, 49%) - Green: hsl(162, 70%, 40%)
+        Orange: hsl(14, 80%, 49%)
+
+        For more colors visit: https://htmlcolorcodes.com/
+        -> Choose any color
+        -> Copy the color mode (HSL)
+    */
+    --hue: 358;
+    --first-color: hsl(var(--hue), 80%, 49%);
+    --first-color-alt: hsl(var(--hue), 76%, 45%);
+    --white-color: hsl(0, 0%, 98%);
+    --black-color: hsl(0, 0%, 1%);
+    --text-color: hsl(var(--hue), 2%, 66%);
+    --body-color: hsl(var(--hue), 100%, 1%);
+    --container-color: hsl(var(--hue), 2%, 10%);
+    --conic-gradient: conic-gradient(from 150deg at 50% 45%,
+                        hsl(var(--hue), 80%, 20%) 0deg,
+                        hsl(var(--hue), 80%, 48%) 140deg,
+                        hsl(var(--hue), 80%, 20%) 360deg);
+    --textcolor: hsl(var(--hue), 80%, 49%); /* Added textcolor variable */
+
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Montserrat Alternates", sans-serif;
+    --second-font: "Grechen Fuemen", cursive;
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 0.9rem; /* Smaller h3 */
+    --normal-font-size: .875rem; /* Smaller normal text */
+    --small-font-size: .75rem; /* Smaller small text */
+    --smaller-font-size: .75rem;
+
+    /*========== Font weight ==========*/
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1168px) {
+    :root {
+        --biggest-font-size: 3.5rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+input,
+textarea,
+button {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
 body {
-    background-color: black;
+    background-color: var(--body-color);
+    color: var(--white-color);
+}
+
+input,
+button,
+textarea {
+    border: none;
+    outline: none;
+}
+
+h1, h2, h3, h4 {
+    color: var(--white-color);
+    font-weight: var(--font-semi-bold);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+    max-width: 1168px;
+    margin-inline: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.section {
+    padding-block: 2rem 3rem;
+}
+
+.section__title {
+    font-size: var(--h2-font-size);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.main {
+    overflow: hidden;
+}
+  
+  
+body {
+    background-color:black;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -13,6 +154,7 @@ body {
     font-family: 'Ubuntu', sans-serif;
     scroll-behavior: smooth;
 }
+
 
 /* Loading screen */
 #loading-screen {
@@ -56,7 +198,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background: rgba(6, 5, 8, 255);
+    background-color: black;
     color: white;
     position: fixed;
     width: 100%;
@@ -176,6 +318,7 @@ h4 {
 
 .home-right img {
     position: absolute;
+    max-width: fit-content;
     width: 170%;
     left: 40px;
     top: -50px;
@@ -540,179 +683,188 @@ h4 {
 
 
 /* Projects Section */
-#projects {
-    position: sticky;
-    margin-top: 2rem;
+/*=============== PROJECTS ===============*/
+.projects__container {
+    padding-top: 3rem;
+    row-gap: 2rem;
+    overflow: hidden; /* Important for Swiper */
+    padding-bottom: 2.5rem; /* Adjust as needed for pagination */
 }
-
-.swiper-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 2rem auto;
-    overflow: hidden;
-    padding-bottom: 2rem;
-}
-
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    margin: 10px;
-}
-
-.projects-item {
-    max-width: 20rem;
-    width: 90%;
-    background: #7952b3;
-    border-radius: 1.5rem;
-    padding: 2rem 1rem;
-    text-align: justify;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.projects-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.projects-item h1 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-    color: #fff;
-    text-align: center;
-}
-
-.projects-item p {
-    font-size: 0.9rem;
-    color: #eee;
-}
-
-.projects-item .btn {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    color: rgb(128, 0, 128);
-    background-color: #7952b3;
-    border: 1px solid #800080;
-    border-radius: 0.5rem;
-    text-align: center;
-}
-
-.projects-item .btn:hover {
-    background-color: #fff;
-    color: black;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-    display: none !important;
-}
-
-.swiper-pagination {
-    bottom: 10px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.swiper-pagination-bullet {
-    background-color: white !important;
+.section__title{
+    font-size: 30px;
 }
 
 .swiper-wrapper {
+    display: flex; /* Ensure slides are in a row */
+    padding: 0; /* Remove default padding that might interfere */
+}
+
+.swiper-slide {
+    background-color: var(--container-color); /* Or your card background color */
+    padding: 1.5rem;
+    border-radius: 2rem;
+    width: 330px; /* Match your card width for initial display */
+    margin-right: 2rem; /* Add some space between slides */
+}
+
+/* Last slide should not have margin-right */
+.swiper-wrapper > .swiper-slide:last-child {
+    margin-right: 0;
+}
+
+.projects__image {
+    display: block;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.projects__img {
+    width: 100%; /* Make sure the image fills the container */
+    transition: transform .4s;
+}
+
+.projects__name {
+    font-size: var(--h3-font-size);
+    margin-bottom: .5rem;
+}
+
+.projects__description {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.6; /* Improve readability */
+    font-size: var(--normal-font-size); /* Or your preferred font size */
+    text-align: justify; /* This is the key property */
+    -webkit-hyphens: auto; /* For Safari */
+    -moz-hyphens: auto;    /* For Firefox */
+    hyphens: auto;          /* Standard */
+}
+
+.projects__skills {
+    width: max-content;
+    height: 34px;
+    background-color: var(--black-color);
+    padding-inline: .75rem;
     display: flex;
     align-items: center;
+    column-gap: .75rem;
+    border-radius: 4rem;
+    margin-bottom: 1.5rem;
 }
 
-/* Responsive Projects Section */
-@media (max-width: 400px) {
-    /* Styles applied to screens with a maximum width of 400 pixels (typically mobile phones) */
+.projects__skill {
+    width: 1rem;
+    transition: transform .4s;
+}
 
-    .swiper-container {
-        /* Set the width of the Swiper container to 100% of its parent */
-        width: 100% !important;
+.projects__skill:hover {
+    transform: translateY(-.25rem);
+}
 
-        /* Add margin to the top and bottom, and center the container horizontally */
-        margin: 1rem auto !important;
+/* This rule should be applied to the container holding all the project details */
+.projects__data {
+    /* ... other existing styles ... */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This pushes the buttons to the bottom */
+    align-items: flex-start; /* Keeps text aligned to the left */
+    min-height: 0; /* Important for flexbox height calculations */
+}
 
-        /* Add padding to the bottom to create space for the pagination dots */
-        padding-bottom: 3rem !important;
-    }
+/* This rule should be applied to the direct container of your two buttons */
+.projects__buttons {
+    display: flex;
+    justify-content: space-between; /* This puts space between the buttons */
+    width: 100%; /* Ensure it takes the full width available */
+}
 
-    .swiper-wrapper {
-        /* Use flexbox to arrange the slides horizontally */
-        display: flex !important;
-    }
+.projects__button {
+    color: var(--white-color);
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    transition: color .4s;
+}
 
-    .swiper-slide {
-        /* Set the width of each slide to 100% */
-        width: 100% !important;
+.projects__button i {
+    font-size: 1.25rem;
+}
 
-        /* Add margin to the top and bottom of each slide */
-        margin: 1rem 0 !important;
+.projects__button span {
+    font-weight: var(--font-medium);
+}
 
-        /* Use flexbox to arrange the content within each slide */
-        display: flex !important;
+.projects__button:hover {
+    color: var(--textcolor);
+}
 
-        /* Center the project items horizontally within each slide */
-        justify-content: center !important;
-    }
+.projects__card:hover .projects__img {
+    transform: scale(1.2);
+}
 
-    .projects-item {
-        /* Set the maximum width of the project items to 100% */
-        max-width: 100% !important;
+/* Swiper pagination styles */
+.swiper-pagination {
+    position: static !important; /* Display below the slider */
+    margin-top: 1rem;
+}
 
-        /* Set the width of the project items to 100% */
-        width: 100% !important;
+.swiper-pagination-bullet {
+    background-color: var(--text-color-light);
+    opacity: 1;
+}
 
-        /* Add padding inside the project items */
-        padding: 1.5rem !important;
+.swiper-pagination-bullet-active {
+    background-color: var(--first-color);
+    background: white !important;
+}
 
-        /* Add a subtle shadow to the project items */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+/* Swiper navigation button styles */
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--first-color);
+    top: 50%;
+    transform: translateY(-50%);
+}
 
-        /* Add rounded corners to the project items */
-        border-radius: 10px !important;
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 1.5rem; /* Adjust icon size */
+    font-weight: bold;
+}
 
-        /* Display project items as inline-block to arrange them side by side */
-        display: inline-block !important;
-    }
+.swiper-button-prev {
+    left: 1rem;
+    display:none !important; /* Hide prev button on mobile */
+}
 
-    .projects-item h1 {
-        /* Increase the font size of the project item headings */
-        font-size: 1.4rem !important;
-    }
+.swiper-button-next {
+    right: 1rem;
+    display: none !important; /* Hide next button on mobile */
+}
 
-    .projects-item p {
-        /* Set the font size of the project item paragraphs */
-        font-size: 0.85rem !important;
-
-        /* Add margin to the bottom of the paragraphs to create space between paragraphs and buttons */
-        margin-bottom: 1rem !important;
-    }
-
-    .projects-item .btn {
-        /* Set the font size of the project item buttons */
-        font-size: 0.9rem !important;
-
-        /* Add padding to the project item buttons */
-        padding: 0.4rem 0.8rem !important;
-
-        /* Display buttons as block elements to stack them vertically */
-        display: block;
-
-        /* Center the buttons horizontally */
-        margin: 0 auto;
-    }
-
-    .swiper-pagination {
-        /* Add margin to the bottom of the pagination to create space */
-        margin-bottom: 25px !important;
+/*=============== BREAKPOINTS ===============*/
+/* For medium devices */
+@media screen and (max-width: 768px) {
+    .projects__container {
+        grid-template-columns: repeat(auto-fit, 300px);
     }
 }
 
+/* For small devices */
+@media screen and (max-width: 576px) {
+    .projects__container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .projects__container {
+        grid-template-columns: 280px;
+    }
+    .projects__card {
+        padding: 1rem;
+    }
+}
 /*End of Projects Section */
 
 

@@ -13,7 +13,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/x-icon" href="static/images/favicon.jpeg" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <!-- Swiper.js CSS -->
@@ -163,379 +170,768 @@
 
     <!-- skills section -->
 
-
     <section id="skills-section">
       <h1 class="sub-title">My Skills</h1>
-  
-      <div class="skills-container">
-          <div class="technical-skills">
-              <h2>Technical Skills</h2>
-              <div class="skill-row">
-                  <div class="skill-icon">
-                      <i class="bx bxl-html5" style="color: #E34C26;"></i>
-                  </div>
-                  <div class="skill-info">
-                      <span class="skill-name">HTML</span>
-                      <div class="progress-bar">
-                          <div class="progress" data-percent="90"></div>
-                      </div>
-                      <span class="percent">90%</span>
-                  </div>
-              </div>
-              <div class="skill-row">
-                  <div class="skill-icon">
-                      <i class="bx bxl-css3" style="color: #1572B6;"></i>
-                  </div>
-                  <div class="skill-info">
-                      <span class="skill-name">CSS</span>
-                      <div class="progress-bar">
-                          <div class="progress" data-percent="80"></div>
-                      </div>
-                      <span class="percent">80%</span>
-                  </div>
-              </div>
-              <div class="skill-row">
-                  <div class="skill-icon">
-                      <i class="bx bxl-python" style="color: #3776AB;"></i>
-                  </div>
-                  <div class="skill-info">
-                      <span class="skill-name">Python</span>
-                      <div class="progress-bar">
-                          <div class="progress" data-percent="75"></div>
-                      </div>
-                      <span class="percent">75%</span>
-                  </div>
-              </div>
-              <div class="skill-row">
-                  <div class="skill-icon">
-                      <i class="bx bxl-django" style="color: #092E20;"></i>
-                  </div>
-                  <div class="skill-info">
-                      <span class="skill-name">Django</span>
-                      <div class="progress-bar">
-                          <div class="progress" data-percent="65"></div>
-                      </div>
-                      <span class="percent">65%</span>
-                  </div>
-              </div>
-              <div class="skill-row">
-                  <div class="skill-icon">
-                      <i class="bx bxl-git" style="color: #F05032;"></i>
-                  </div>
-                  <div class="skill-info">
-                      <span class="skill-name">Git</span>
-                      <div class="progress-bar">
-                          <div class="progress" data-percent="70"></div>
-                      </div>
-                      <span class="percent">70%</span>
-                  </div>
-              </div>
-              <div class="skill-row">
-                  <div class="skill-icon">
-                    <i class="bx bx-data" style="color: #00758F;"></i>
-                  </div>
-                  <div class="skill-info">
-                      <span class="skill-name">MySQL</span>
-                      <div class="progress-bar">
-                          <div class="progress" data-percent="60"></div>
-                      </div>
-                      <span class="percent">60%</span>
-                  </div>
-              </div>
-               <div class="skill-row">
-                  <div class="skill-icon">
-                      <i class="bx bxl-java" style="color: #5382A1;"></i>
-                  </div>
-                  <div class="skill-info">
-                      <span class="skill-name">Java</span>
-                      <div class="progress-bar">
-                          <div class="progress" data-percent="55"></div>
-                      </div>
-                      <span class="percent">55%</span>
-                  </div>
-              </div>
-          </div>
-  
-          <div class="professional-skills">
-              <h2>Professional Skills</h2>
-              <div class="circle-skill" data-percent="90">
-                  <div class="circle-progress">
-                      <svg viewBox="0 0 100 100">
-                          <path class="bg" d="M 50,50 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"></path>
-                          <path class="fg" d="M 50,50 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"></path>
-                      </svg>
-                      <span class="circle-percent">90%</span>
-                  </div>
-                  <span class="circle-label">Creativity</span>
-              </div>
-              <div class="circle-skill" data-percent="65">
-                  <div class="circle-progress">
-                      <svg viewBox="0 0 100 100">
-                          <path class="bg" d="M 50,50 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"></path>
-                          <path class="fg" d="M 50,50 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"></path>
-                      </svg>
-                      <span class="circle-percent">65%</span>
-                  </div>
-                  <span class="circle-label">Communication</span>
-              </div>
-              <div class="circle-skill" data-percent="75">
-                  <div class="circle-progress">
-                      <svg viewBox="0 0 100 100">
-                          <path class="bg" d="M 50,50 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"></path>
-                          <path class="fg" d="M 50,50 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"></path>
-                      </svg>
-                      <span class="circle-percent">75%</span>
-                  </div>
-                  <span class="circle-label">Problem Solving</span>
-              </div>
-              <div class="circle-skill" data-percent="85">
-                  <div class="circle-progress">
-                      <svg viewBox="0 0 100 100">
-                          <path class="bg" d="M 50,50 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"></path>
-                          <path class="fg" d="M 50,50 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"></path>
-                      </svg>
-                      <span class="circle-percent">85%</span>
-                  </div>
-                  <span class="circle-label">Teamwork</span>
-              </div>
-          </div>
-      </div>
-  </section>
-    <!-- Projects Section -->
-    <section id="projects">
-      <h1 class="t-center my-2 t-white f-2">Projects</h1>
 
-      <div class="swiper-container mySwiper">
+      <div class="skills-container">
+        <div class="technical-skills">
+          <h2>Technical Skills</h2>
+          <div class="skill-row">
+            <div class="skill-icon">
+              <i class="bx bxl-html5" style="color: #e34c26"></i>
+            </div>
+            <div class="skill-info">
+              <span class="skill-name">HTML</span>
+              <div class="progress-bar">
+                <div class="progress" data-percent="90"></div>
+              </div>
+              <span class="percent">90%</span>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-icon">
+              <i class="bx bxl-css3" style="color: #1572b6"></i>
+            </div>
+            <div class="skill-info">
+              <span class="skill-name">CSS</span>
+              <div class="progress-bar">
+                <div class="progress" data-percent="80"></div>
+              </div>
+              <span class="percent">80%</span>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-icon">
+              <i class="bx bxl-python" style="color: #3776ab"></i>
+            </div>
+            <div class="skill-info">
+              <span class="skill-name">Python</span>
+              <div class="progress-bar">
+                <div class="progress" data-percent="75"></div>
+              </div>
+              <span class="percent">75%</span>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-icon">
+              <i class="bx bxl-django" style="color: #092e20"></i>
+            </div>
+            <div class="skill-info">
+              <span class="skill-name">Django</span>
+              <div class="progress-bar">
+                <div class="progress" data-percent="65"></div>
+              </div>
+              <span class="percent">65%</span>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-icon">
+              <i class="bx bxl-git" style="color: #f05032"></i>
+            </div>
+            <div class="skill-info">
+              <span class="skill-name">Git</span>
+              <div class="progress-bar">
+                <div class="progress" data-percent="70"></div>
+              </div>
+              <span class="percent">70%</span>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-icon">
+              <i class="bx bx-data" style="color: #00758f"></i>
+            </div>
+            <div class="skill-info">
+              <span class="skill-name">MySQL</span>
+              <div class="progress-bar">
+                <div class="progress" data-percent="60"></div>
+              </div>
+              <span class="percent">60%</span>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-icon">
+              <i class="bx bxl-java" style="color: #5382a1"></i>
+            </div>
+            <div class="skill-info">
+              <span class="skill-name">Java</span>
+              <div class="progress-bar">
+                <div class="progress" data-percent="55"></div>
+              </div>
+              <span class="percent">55%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="professional-skills">
+          <h2>Professional Skills</h2>
+          <div class="circle-skill" data-percent="90">
+            <div class="circle-progress">
+              <svg viewBox="0 0 100 100">
+                <path
+                  class="bg"
+                  d="M 50,50 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"
+                ></path>
+                <path
+                  class="fg"
+                  d="M 50,50 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"
+                ></path>
+              </svg>
+              <span class="circle-percent">90%</span>
+            </div>
+            <span class="circle-label">Creativity</span>
+          </div>
+          <div class="circle-skill" data-percent="65">
+            <div class="circle-progress">
+              <svg viewBox="0 0 100 100">
+                <path
+                  class="bg"
+                  d="M 50,50 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"
+                ></path>
+                <path
+                  class="fg"
+                  d="M 50,50 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"
+                ></path>
+              </svg>
+              <span class="circle-percent">65%</span>
+            </div>
+            <span class="circle-label">Communication</span>
+          </div>
+          <div class="circle-skill" data-percent="75">
+            <div class="circle-progress">
+              <svg viewBox="0 0 100 100">
+                <path
+                  class="bg"
+                  d="M 50,50 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"
+                ></path>
+                <path
+                  class="fg"
+                  d="M 50,50 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"
+                ></path>
+              </svg>
+              <span class="circle-percent">75%</span>
+            </div>
+            <span class="circle-label">Problem Solving</span>
+          </div>
+          <div class="circle-skill" data-percent="85">
+            <div class="circle-progress">
+              <svg viewBox="0 0 100 100">
+                <path
+                  class="bg"
+                  d="M 50,50 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"
+                ></path>
+                <path
+                  class="fg"
+                  d="M 50,50 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"
+                ></path>
+              </svg>
+              <span class="circle-percent">85%</span>
+            </div>
+            <span class="circle-label">Teamwork</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- projects section -->
+
+    <section class="projects section" id="projects">
+      <h2 class="section__title">Projects</h2>
+
+      <div class="projects__container container swiper">
         <div class="swiper-wrapper">
-          <!-- Project 1 -->
-          <div class="swiper-slide">
-            <div class="projects-item flex f-col s-center items-center">
-              <h1 class="t-white popinss">Criteria-6 Automation</h1>
-              <p class="t-white popinss">
+          <article class="projects__card swiper-slide">
+            <a
+              href="https://github.com/Shashankhuilgol/CR-6-Automation"
+              target="_blank"
+              class="projects__image"
+            >
+              <img
+                src="static/images/projects-1.jpg"
+                alt="image"
+                class="projects__img"
+              />
+            </a>
+            <div class="projects__data">
+              <h3 class="projects__name">Criteria-6 Automation</h3>
+              <p class="projects__description">
                 This system overcomes the challenges of manual record-keeping by
                 efficiently managing staff and item details within the
                 department. It minimizes redundancy, inconsistency, and
                 inefficiencies through a Database Management System (DBMS),
                 ensuring seamless data handling.
               </p>
-              <div class="button flex s-around">
+              <div class="projects__skills">
+                <img
+                  src="static/images/skills-python.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-html.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-css.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-flask.png"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-sql.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+              </div>
+              <div class="projects__buttons">
                 <a
                   href="https://github.com/Shashankhuilgol/CR-6-Automation"
-                  class="btn mx-1 m-top"
-                  >GitHub</a
+                  target="_blank"
+                  class="projects__button"
                 >
-                <a href="" class="btn m-top live">Live Link</a>
+                  <i class="ri-link"></i>
+                  <span>visit project</span>
+                </a>
+                <a
+                  href="https://github.com/Shashankhuilgol/CR-6-Automation"
+                  target="_blank"
+                  class="projects__button"
+                >
+                  <i class="ri-github-line"></i>
+                  <span>GitHub</span>
+                </a>
               </div>
             </div>
-          </div>
-
-          <!-- Project 2 -->
-          <div class="swiper-slide">
-            <div class="projects-item flex f-col s-center items-center">
-              <h1 class="t-white popinss">My Portfolio</h1>
-              <p class="t-white popinss">
+          </article>
+          <article class="projects__card swiper-slide">
+            <a
+              href="portfolio-2-278q.onrender.com/"
+              target="_blank"
+              class="projects__image"
+            >
+              <img
+                src="static/images/projects-2.jpg"
+                alt="image"
+                class="projects__img"
+              />
+            </a>
+            <div class="projects__data">
+              <h3 class="projects__name">My Portfolio</h3>
+              <p class="projects__description">
                 I designed and built this portfolio website using HTML, CSS,
                 JavaScript, Python, and Django to showcase my skills. The site
                 has a modern, minimal design that highlights content, making my
                 work stand out. Its simple, intuitive layout helps visitors
                 navigate easily and explore my projects.
               </p>
-              <div class="button flex s-around">
-                <a href="" class="btn mx-1 m-top">GitHub</a>
-                <a href="" class="btn m-top live">Live Link</a>
+              <div class="projects__skills">
+                <img
+                  src="static/images/skills-python.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-html.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-css.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-django.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-dbsqlite.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+              </div>
+              <div class="projects__buttons">
+                <a
+                  href="portfolio-2-278q.onrender.com/"
+                  target="_blank"
+                  class="projects__button"
+                >
+                  <i class="ri-link"></i>
+                  <span>visit project</span>
+                </a>
+                <a
+                  href="https://github.com/Shashankhuilgol/Portfolio"
+                  target="_blank"
+                  class="projects__button"
+                >
+                  <i class="ri-github-line"></i>
+                  <span>GitHub</span>
+                </a>
               </div>
             </div>
-          </div>
-
-          <!-- Project 3 -->
-          <div class="swiper-slide">
-            <div class="projects-item flex f-col s-center items-center">
-              <h1 class="t-white popinss">Flask Auth_App</h1>
-              <p class="t-white popinss">
+          </article>
+          <article class="projects__card swiper-slide">
+            <a
+              href="https://librarymanagementsystem-production-eab9.up.railway.app"
+              target="_blank"
+              class="projects__image"
+            >
+              <img
+                src="static/images/projects-3.jpg"
+                alt="image"
+                class="projects__img"
+              />
+            </a>
+            <div class="projects__data">
+              <h3 class="projects__name">Library Mgmt_System</h3>
+              <p class="projects__description">
+                This Django-based Library Management System efficiently handles
+                books, authors, borrowers, and borrowing records. It streamlines
+                book issuing and returns, tracks user activities, and ensures
+                smooth resource management, enhancing overall library efficiency
+                and accessibility.
+              </p>
+              <div class="projects__skills">
+                <img
+                  src="static/images/skills-python.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-html.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-css.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-django.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-dbsqlite.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+              </div>
+              <div class="projects__buttons">
+                <a
+                  href="https://librarymanagementsystem-production-eab9.up.railway.app"
+                  target="_blank"
+                  class="projects__button"
+                >
+                  <i class="ri-link"></i>
+                  <span>visit project</span>
+                </a>
+                <a
+                  href="https://github.com/Shashankhuilgol/Library_Management_System"
+                  target="_blank"
+                  class="projects__button"
+                >
+                  <i class="ri-github-line"></i>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="projects__card swiper-slide">
+            <a
+              href="https://movie-recommendation-system-d0wipn40b.vercel.app/"
+              target="_blank"
+              class="projects__image"
+            >
+              <img
+                src="static/images/projects-4.jpg"
+                alt="image"
+                class="projects__img"
+              />
+            </a>
+            <div class="projects__data">
+              <h3 class="projects__name">Movie Rec_System</h3>
+              <p class="projects__description">
+                The Movie Recommendation System is a Flask-based web app that
+                helps users discover movies based on their preferences. It
+                filters by genre, rating, and language, offering a personalized
+                list through a clean, user-friendly interface and curated movie
+                collection.
+              </p>
+              <div class="projects__skills">
+                <img
+                  src="static/images/skills-python.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-html.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-css.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-flask.png"
+                  alt="image"
+                  class="projects__skill"
+                />
+              </div>
+              <div class="projects__buttons">
+                <a
+                  href="https://movie-recommendation-system-d0wipn40b.vercel.app/"
+                  target="_blank"
+                  class="projects__button"
+                >
+                  <i class="ri-link"></i>
+                  <span>visit project</span>
+                </a>
+                <a
+                  href="https://github.com/Shashankhuilgol/Movie_Recommendation_System"
+                  target="_blank"
+                  class="projects__button"
+                >
+                  <i class="ri-github-line"></i>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="projects__card swiper-slide">
+            <a
+              href="https://github.com/Shashankhuilgol/Flask_Auth_App"
+              target="_blank"
+              class="projects__image"
+            >
+              <img
+                src="static/images/projects-5.jpg"
+                alt="image"
+                class="projects__img"
+              />
+            </a>
+            <div class="projects__data">
+              <h3 class="projects__name">Flask Auth_App</h3>
+              <p class="projects__description">
                 The Flask Authentication App, built with Flask, manages user
                 registration, login, and logout. It secures passwords using
                 Flask-Bcrypt, handles sessions with Flask-Login, and stores data
                 via Flask-SQLAlchemy. Flask-WTF ensures form validation, making
                 authentication seamless and secure.
               </p>
-              <div class="button flex s-around">
+              <div class="projects__skills">
+                <img
+                  src="static/images/skills-python.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-html.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-css.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-flask.png"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-dbsqlite.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+              </div>
+              <div class="projects__buttons">
                 <a
                   href="https://github.com/Shashankhuilgol/Flask_Auth_App"
-                  class="btn mx-1 m-top"
-                  >GitHub</a
+                  target="_blank"
+                  class="projects__button"
                 >
-                <a href="" class="btn m-top live">Live Link</a>
+                  <i class="ri-link"></i>
+                  <span>visit project</span>
+                </a>
+                <a
+                  href="https://github.com/Shashankhuilgol/Flask_Auth_App"
+                  target="_blank"
+                  class="projects__button"
+                >
+                  <i class="ri-github-line"></i>
+                  <span>GitHub</span>
+                </a>
               </div>
             </div>
-          </div>
-
-          <!-- Project 4 -->
-          <div class="swiper-slide">
-            <div class="projects-item flex f-col s-center items-center">
-              <h1 class="t-white popinss">Library Mgmt_System</h1>
-              <p class="t-white popinss">
-                This Library Management System is built using Django. It
-                includes models for managing books, authors, borrowers, and
-                borrowed books. The system offers seamless operations like
-                borrowing and returning books while tracking user activities and
-                ensuring proper resource management.
+          </article>
+          <article class="projects__card swiper-slide">
+            <a
+              href="https://github.com/Shashankhuilgol/Utube_Video_Downloader"
+              target="_blank"
+              class="projects__image"
+            >
+              <img
+                src="static/images/projects-6.jpg"
+                alt="image"
+                class="projects__img"
+              />
+            </a>
+            <div class="projects__data">
+              <h3 class="projects__name">YT Video Downloader</h3>
+              <p class="projects__description">
+                The YouTube Video Downloader is a Flask-based Python app that
+                lets users download YouTube videos easily. Built with the pytube
+                library, it provides a user-friendly interface to input video
+                URLs, select quality, and ensures smooth, reliable video
+                downloads.
               </p>
-              <div class="button flex s-around">
-                <a
-                  href="https://github.com/Shashankhuilgol/Library_Management_System"
-                  class="btn mx-1 m-top"
-                  >GitHub</a
-                >
-                <a
-                  href="https://librarymanagementsystem-production-eab9.up.railway.app"
-                  class="btn m-top live"
-                  >Live Link</a
-                >
+              <div class="projects__skills">
+                <img
+                  src="static/images/skills-python.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-html.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-css.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-flask.png"
+                  alt="image"
+                  class="projects__skill"
+                />
               </div>
-            </div>
-          </div>
-
-          <!-- Project 5 -->
-          <div class="swiper-slide">
-            <div class="projects-item flex f-col s-center items-center">
-              <h1 class="t-white popinss">Movie Rec_System</h1>
-              <p class="t-white popinss">
-                This portfolio website is built using HTML, CSS, JavaScript,
-                Python, and Django. It showcases my skills through a modern,
-                minimal design. The site offers seamless navigation, ensuring
-                visitors can explore my work effortlessly while emphasizing
-                content and providing an intuitive user experience.
-              </p>
-              <div class="button flex s-around">
-                <a
-                  href="https://github.com/Shashankhuilgol/Movie_Recommendation_System"
-                  class="btn mx-1 m-top"
-                  >GitHub</a
-                >
-                <a
-                  href="https://movie-recommendation-system-d0wipn40b.vercel.app/"
-                  class="btn m-top live"
-                  >Live Link</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 6 -->
-          <div class="swiper-slide">
-            <div class="projects-item flex f-col s-center items-center">
-              <h1 class="t-white popinss">YT Video Downloader</h1>
-              <p class="t-white popinss">
-                The YouTube Video Downloader is a Python-based application that
-                allows users to download YouTube videos effortlessly. Built
-                using Flask and the pytube library, it provides an intuitive
-                interface to input video URLs and choose download quality. The
-                system ensures fast and reliable video downloads while
-                maintaining a user-friendly experience.
-              </p>
-              <div class="button flex s-around">
+              <div class="projects__buttons">
                 <a
                   href="https://github.com/Shashankhuilgol/Utube_Video_Downloader"
-                  class="btn mx-1 m-top"
-                  >GitHub</a
+                  target="_blank"
+                  class="projects__button"
                 >
+                  <i class="ri-link"></i>
+                  <span>visit project</span>
+                </a>
                 <a
                   href="https://github.com/Shashankhuilgol/Utube_Video_Downloader"
-                  class="btn m-top live"
-                  >Live Link</a
+                  target="_blank"
+                  class="projects__button"
                 >
+                  <i class="ri-github-line"></i>
+                  <span>GitHub</span>
+                </a>
               </div>
             </div>
-          </div>
-
-          <!-- Project 7 -->
-          <div class="swiper-slide">
-            <div class="projects-item flex f-col s-center items-center">
-              <h1 class="t-white popinss">Ecom Sales Dashboard</h1>
-              <p class="t-white popinss">
-                This project involves analyzing e-commerce sales data and
-                visualizing key insights using interactive dashboards. It helps
-                track revenue, customer trends, product performance, and sales
-                growth over time. Built with Python, Pandas, and
-                Matplotlib/Seaborn, it provides data-driven decision-making for
-                business optimization.
+          </article>
+          <article class="projects__card swiper-slide">
+            <a
+              href="https://github.com/Shashankhuilgol/E-COMMERCE-SALES-DASHBOARD"
+              target="_blank"
+              class="projects__image"
+            >
+              <img
+                src="static/images/projects-7.jpg"
+                alt="image"
+                class="projects__img"
+              />
+            </a>
+            <div class="projects__data">
+              <h3 class="projects__name">Ecom Sales Dashboard</h3>
+              <p class="projects__description">
+                This project analyzes e-commerce sales data and visualizes key
+                insights through interactive dashboards. Built with Python,
+                Pandas, and Matplotlib/Seaborn, it tracks revenue, customer
+                trends, and product performance to support data-driven decisions
+                and boost business growth.
               </p>
-              <div class="button flex s-around">
+              <div class="projects__skills">
+                <img
+                  src="static/images/skills-powerbi.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-excel.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+              </div>
+              <div class="projects__buttons">
                 <a
                   href="https://github.com/Shashankhuilgol/E-COMMERCE-SALES-DASHBOARD"
-                  class="btn mx-1 m-top"
-                  >GitHub</a
+                  target="_blank"
+                  class="projects__button"
                 >
+                  <i class="ri-link"></i>
+                  <span>visit project</span>
+                </a>
                 <a
                   href="https://github.com/Shashankhuilgol/E-COMMERCE-SALES-DASHBOARD"
-                  class="btn m-top live"
-                  >Live Link</a
+                  target="_blank"
+                  class="projects__button"
                 >
+                  <i class="ri-github-line"></i>
+                  <span>GitHub</span>
+                </a>
               </div>
             </div>
-          </div>
-
-          <!-- Project 8 -->
-          <div class="swiper-slide">
-            <div class="projects-item flex f-col s-center items-center">
-              <h1 class="t-white popinss">Task Master</h1>
-              <p class="t-white popinss">
-                This Django-based To-Do List App helps users efficiently
-                organize their daily tasks. It allows users to add, update, and
-                delete tasks while storing data in a database for seamless
-                access. With a clean and user-friendly interface, the app
-                ensures a smooth task management experience, making it easy to
-                track progress and stay productive.
+          </article>
+          <article class="projects__card swiper-slide">
+            <a
+              href="https://github.com/Shashankhuilgol/Task-Master"
+              target="_blank"
+              class="projects__image"
+            >
+              <img
+                src="static/images/projects-8.jpg"
+                alt="image"
+                class="projects__img"
+              />
+            </a>
+            <div class="projects__data">
+              <h3 class="projects__name">Task Master</h3>
+              <p class="projects__description">
+                This Django-based To-Do List App helps users efficiently manage
+                daily tasks. It enables adding, updating, and deleting tasks
+                with data securely stored in a database. Featuring a clean and
+                intuitive interface, it simplifies task tracking and enhances
+                personal productivity.
               </p>
-              <div class="button flex s-around">
+              <div class="projects__skills">
+                <img
+                  src="static/images/skills-python.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-html.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-css.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-django.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-dbsqlite.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+              </div>
+              <div class="projects__buttons">
                 <a
                   href="https://github.com/Shashankhuilgol/Task-Master"
-                  class="btn mx-1 m-top"
-                  >GitHub</a
+                  target="_blank"
+                  class="projects__button"
                 >
+                  <i class="ri-link"></i>
+                  <span>visit project</span>
+                </a>
                 <a
                   href="https://github.com/Shashankhuilgol/Task-Master"
-                  class="btn m-top live"
-                  >Live Link</a
+                  target="_blank"
+                  class="projects__button"
                 >
+                  <i class="ri-github-line"></i>
+                  <span>GitHub</span>
+                </a>
               </div>
             </div>
-          </div>
-
-          <!-- Project 9 -->
-          <div class="swiper-slide">
-            <div class="projects-item flex f-col s-center items-center">
-              <h1 class="t-white popinss">Netflix Analysis</h1>
-              <p class="t-white popinss">
-                This project analyzes Netflix’s dataset to uncover trends in
-                content distribution, genre popularity, and viewer preferences.
-                Using Python and data visualization libraries, it provides
-                insights into release patterns, ratings, and regional content
-                availability, helping understand Netflix’s content strategy.
+          </article>
+          <article class="projects__card swiper-slide">
+            <a
+              href="https://github.com/Shashankhuilgol/netflix-data-analysis"
+              target="_blank"
+              class="projects__image"
+            >
+              <img
+                src="static/images/projects-9.jpg"
+                alt="image"
+                class="projects__img"
+              />
+            </a>
+            <div class="projects__data">
+              <h3 class="projects__name">Netflix Analysis</h3>
+              <p class="projects__description">
+                This project analyzes Netflix’s dataset to reveal trends in
+                content distribution genre popularity, and viewer behavior.
+                Using Python and data visualization tools, it uncovers insights
+                on release patterns, ratings, and regional availability to
+                understand Netflix’s content strategy.
               </p>
-              <div class="button flex s-around">
+              <div class="projects__skills">
+                <img
+                  src="static/images/skills-python.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-jupyter.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-pandas.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+                <img
+                  src="static/images/skills-numpy.svg"
+                  alt="image"
+                  class="projects__skill"
+                />
+              </div>
+              <div class="projects__buttons">
                 <a
                   href="https://github.com/Shashankhuilgol/netflix-data-analysis"
-                  class="btn mx-1 m-top"
-                  >GitHub</a
+                  target="_blank"
+                  class="projects__button"
                 >
+                  <i class="ri-link"></i>
+                  <span>visit project</span>
+                </a>
                 <a
                   href="https://github.com/Shashankhuilgol/netflix-data-analysis"
-                  class="btn m-top live"
-                  >Live Link</a
+                  target="_blank"
+                  class="projects__button"
                 >
+                  <i class="ri-github-line"></i>
+                  <span>GitHub</span>
+                </a>
               </div>
             </div>
-          </div>
+          </article>
         </div>
 
-        <!-- Pagination and Navigation -->
         <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+
+        <div class="swiper-button-prev">
+          <i class="ri-arrow-left-s-line"></i>
+        </div>
+        <div class="swiper-button-next">
+          <i class="ri-arrow-right-s-line"></i>
+        </div>
       </div>
     </section>
-
     <!--certifications section-->
     <section id="certifications">
       <h1 class="t-center my-2 t-white f-2">Certifications</h1>
@@ -667,7 +1063,7 @@
         <li><a href="#home" class="popinss">Home</a></li>
         <li><a href="#about" class="popinss">About Me</a></li>
         <li><a href="#skills" class="popinss">Skills</a></li>
-        <li><a href="#projects" class="popinss">Projects</a></li>       
+        <li><a href="#projects" class="popinss">Projects</a></li>
       </ul>
       <ul class="flex s-center w-80 font-awesome">
         <a href="https://github.com/Shashankhuilgol" target="_blank">
@@ -689,9 +1085,9 @@
         </a>
       </ul>
       <p class="t-center my-2 popinss">
-        &copy; All Right Reserved -<spam class="cpy-white popinss"
+        &copy; All Right Reserved -<span class="cpy-white popinss"
           >Shashank 2025
-        </spam>
+        </span>
       </p>
     </footer>
     <script src="{% static 'js/script.js' %}"></script>

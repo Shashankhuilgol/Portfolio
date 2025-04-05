@@ -80,7 +80,3 @@ def contact(request):
 
     # Render the contact form page (GET request)
     return render(request, 'index.html')
-
-
-
-
