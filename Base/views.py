@@ -87,3 +87,4 @@ def custom_500(request):
 
 def custom_400(request, exception):
     return render(request, '400.html', status=400)
+    
