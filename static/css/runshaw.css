@@ -1,0 +1,101 @@
+/* runshaw.css */
+
+/* Whole page background */
+body {
+  background-color: #0b0b0b; /* black background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff; /* text color white */
+  margin: 0;
+  padding: 0;
+}
+
+/* Experience card */
+.experience-detail {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 40px;
+  background-color: #1a1a1a; /* dark grey card */
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+  text-align: center;
+}
+
+/* Logo styling */
+.experience-logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 20px;
+  display: block;
+  border: 3px solid #d35400; /* orange border */
+}
+
+/* Section title */
+.experience-header .section__title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff8c00; /* orange title */
+  margin-bottom: 10px;
+}
+
+/* Duration */
+.experience__duration {
+  font-size: 16px;
+  color: #bbbbbb;
+  margin-bottom: 30px;
+}
+
+/* Description */
+.experience__description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #dddddd;
+}
+
+/* Skills */
+.experience__tech {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffa500; /* light orange */
+}
+
+/* Important links list */
+.experience-links {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.experience-links li {
+  margin: 10px 0;
+}
+
+.experience-links li a {
+  color: #ff8c00;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.experience-links li a:hover {
+  color: #ffa500;
+  text-decoration: underline;
+}
+
+/* Back button */
+.button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #d35400;
+  color: #ffffff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #ffa500;
+  color: #0b0b0b;
+}

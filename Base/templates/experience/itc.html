@@ -1,18 +1,29 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>ITC Infotech Experience</title>
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body style="background-color: black; color: white;">
-  <section>
-    <h2>ITC Infotech · Associate IT Consultant</h2>
-    <img src="{% static 'images/itc_logo.jpeg' %}" alt="ITC Logo" class="company-logo">
-    <p>Started Aug 2025 – Present</p>
-    <p>Currently working on the BAT project in SAP BASIS application domain.</p>
-    <a href="{% url 'experience' %}" style="color: #0a66c2;">← Back to Experience</a>
-  </section>
-</body>
-</html>
+<!-- itc.html -->
+ {% load static %}
+<section class="experience-detail section">
+  <div class="experience-header">
+    <img src="{% static 'images/itc_logo.jpeg' %}" alt="ITC Infotech Logo" class="experience-logo">
+    <h2 class="section__title">SAP Functional Developer / Consultant</h2>
+    <p class="experience__duration">Jan 2025 – Present</p>
+  </div>
+
+  <div class="experience-content">
+    <p class="experience__description">
+      As a SAP Functional Developer / Consultant, I work on configuring, testing, and supporting SAP applications in a professional environment. The role involves understanding business processes, collaborating with teams to implement solutions, and ensuring smooth system operations. This experience helps in developing expertise in SAP modules, problem-solving, and professional communication.
+    </p>
+
+    <p class="experience__tech"><strong>Technologies / Skills:</strong> SAP, SAP Modules (FI, MM, SD), SAP Functional Configuration, SQL, System Analysis, Process Documentation</p>
+
+    <h3>Learn More About SAP:</h3>
+    <ul class="experience-links">
+      <li><a href="https://www.sap.com/products/erp.html" target="_blank">Official SAP ERP Overview</a></li>
+      <li><a href="https://training.sap.com/" target="_blank">SAP Learning Hub / Training</a></li>
+      <li><a href="https://www.guru99.com/sap-tutorial.html" target="_blank">SAP Tutorials (Free)</a></li>
+      <li><a href="https://www.linkedin.com/learning/topics/sap" target="_blank">SAP Courses on LinkedIn Learning</a></li>
+    </ul>
+
+    <a href="{% url 'experience' %}" class="button">Back to Experience</a>
+    <link rel="stylesheet" href="{% static 'css/itc.css' %}">
+
+  </div>
+</section>

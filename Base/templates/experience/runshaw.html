@@ -1,18 +1,38 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Runshaw Technologies Experience</title>
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body style="background-color: black; color: white;">
-  <section>
-    <h2>Runshaw Technologies Pvt Ltd · Full Stack Web Developer Intern</h2>
-    <img src="{% static 'images/runshaw_logo.jpeg' %}" alt="Runshaw Logo" class="company-logo">
-    <p>Aug 2023 – Oct 2023</p>
-    <p>Worked on frontend and backend development, building responsive websites during the internship.</p>
-    <a href="{% url 'experience' %}" style="color: #0a66c2;">← Back to Experience</a>
-  </section>
-</body>
-</html>
+<section class="experience-detail section">
+  <div class="experience-header">
+    <img src="{% static 'images/runshaw_logo.jpeg' %}" alt="Runshaw Technologies Logo" class="experience-logo">
+    <h2 class="section__title">Full Stack Developer Intern</h2>
+    <p class="experience__duration">Aug 2023 – Oct 2023</p>
+  </div>
+
+  <div class="experience-content">
+    <p class="experience__description">
+      During my internship at Runshaw Technologies, I worked on full-stack web development projects. I built backend APIs using Django and Python, created responsive frontend interfaces using HTML & CSS, and integrated the application with a SQLite database. This experience helped me understand the end-to-end development process and enhanced my skills in backend logic, frontend design, and database management.
+    </p>
+
+    <p class="experience__tech"><strong>Technologies / Skills Used:</strong> Python, Django, HTML, CSS, SQLite, Git</p>
+
+    <h3>Project Highlights:</h3>
+    <ul class="experience-links">
+      <li>Developed a fully functional web application with Django backend and HTML/CSS frontend.</li>
+      <li>Implemented RESTful APIs and database integration with SQLite.</li>
+      <li>Worked on responsive design to ensure a seamless user experience across devices.</li>
+      <li>Collaborated with the team using Git for version control and code management.</li>
+    </ul>
+
+    <h3>Learn More About Web Development:</h3>
+    <ul class="experience-links">
+      <li><a href="https://www.djangoproject.com/" target="_blank">Django Official Site</a></li>
+      <li><a href="https://www.python.org/" target="_blank">Python Official Site</a></li>
+      <li><a href="https://www.w3schools.com/html/" target="_blank">HTML Tutorials</a></li>
+      <li><a href="https://www.w3schools.com/css/" target="_blank">CSS Tutorials</a></li>
+      <li><a href="https://www.w3schools.com/sql/" target="_blank">SQL Tutorials</a></li>
+      <li><a href="https://git-scm.com/" target="_blank">Git Version Control</a></li>
+    </ul>
+
+    <a href="{% url 'experience' %}" class="button">Back to Experience</a>
+    <link rel="stylesheet" href="{% static 'css/runshaw.css' %}">
+
+  </div>
+</section>
