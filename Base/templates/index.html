@@ -133,39 +133,53 @@
       </div>
     </section>
 
-    <!-- about section -->
-    <section id="about">
-      <h1 class="t-center my-2 t-white f-2">About Me</h1>
-      <div class="about-container flex s-around">
-        <div class="about-left flex s-center items-center">
-          <img
-            src="{%static 'images/my_image.png'%}"
-            alt="Illustration of a hero"
-            style="width: 60%"
-          />
-        </div>
+<!-- about section -->
+<section id="about">
+  <h1 class="t-center my-2 t-white f-2">About Me</h1>
+  <div class="about-container flex s-around">
+    
+    <!-- Left Image -->
+    <div class="about-left flex s-center items-center">
+      <img
+        src="{% static 'images/my_image.png' %}"
+        alt="Illustration of a hero"
+        style="width: 60%"
+      />
+    </div>
 
-        <div class="about-right flex">
-          <div class="about-content">
-            <h1 class="t-white m-b-1 popinss">Shashank Huilgol</h1>
-            <p class="t-white popinss">
-              I am Shashank Huilgol, an SAP Functional Developer at ITC
-              Infotech, contributing to the BAT project in the SAP BASIS
-              Application domain. I focus on ensuring system stability and
-              smooth operations, while staying passionate about continuous
-              learning, backend development, and advancing as a skilled SAP
-              professional.
-            </p>
-            <a
-              class="btn"
-              id="hireme "
-              href="mailto:Shashank.huilgol22@gmail.com"
-              >Hire Me</a
-            >
-          </div>
+    <!-- Right Content -->
+    <div class="about-right flex">
+      <div class="about-content">
+        <h1 class="t-white m-b-1 popinss">Shashank Huilgol</h1>
+        <p class="t-white popinss">
+          I am Shashank Huilgol, an SAP Functional Developer at ITC
+          Infotech, contributing to the BAT project in the SAP BASIS
+          Application domain. I focus on ensuring system stability and
+          smooth operations, while staying passionate about continuous
+          learning, backend development, and advancing as a skilled SAP
+          professional.
+        </p>
+
+        <!-- Buttons Container -->
+        <div class="about-buttons flex">
+          <!-- Hire Me Button -->
+          <a
+            class="btn"
+            id="hireme"
+            href="mailto:Shashank.huilgol22@gmail.com"
+          >Hire Me</a>
+
+          <!-- Experience Button -->
+          <a
+            class="btn btn-secondary"
+            href="{% url 'experience' %}"
+          >Experience</a>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
 
     <!-- skills section -->
     <section id="skills-section">

@@ -88,3 +88,15 @@ def custom_500(request):
 def custom_400(request, exception):
     return render(request, '400.html', status=400)
     
+
+def experience(request):
+    return render(request, 'experience/experience.html')  # Make sure experience.html exists in templates
+
+def experience_detail(request, company):
+    return render(request, f"experience/{company}.html")
+
+def itc(request):
+    return render(request, 'experience/itc.html')
+
+def runshaw(request):
+    return render(request, 'experience/runshaw.html')

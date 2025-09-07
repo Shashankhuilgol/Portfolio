@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ITC Infotech Experience</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body style="background-color: black; color: white;">
+  <section>
+    <h2>ITC Infotech · Associate IT Consultant</h2>
+    <img src="{% static 'images/itc_logo.jpeg' %}" alt="ITC Logo" class="company-logo">
+    <p>Started Aug 2025 – Present</p>
+    <p>Currently working on the BAT project in SAP BASIS application domain.</p>
+    <a href="{% url 'experience' %}" style="color: #0a66c2;">← Back to Experience</a>
+  </section>
+</body>
+</html>
